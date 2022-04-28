@@ -1,0 +1,219 @@
+.br-menu-link.active {
+    background: linear-gradient(to right, #f26628, #492a07);
+}
+
+.br-menu-sub .sub-link {
+    display: block;
+    font-size: 13px;
+    color: #adb5bd;
+    padding: 7px 0 7px 17px;
+    white-space: nowrap;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .br-menu-sub .sub-link {
+        transition: none;
+    }
+}
+
+.br-menu-sub .sub-link::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -3px;
+    margin-top: -0.5px;
+    width: 5px;
+    height: 1px;
+    background-color: #fff;
+    opacity: 0.5;
+    transition: all 0.2s ease-in-out;
+}
+
+@media screen and (prefers-reduced-motion: reduce) {
+    .br-menu-sub .sub-link::before {
+        transition: none;
+    }
+}
+
+.br-menu-sub .sub-link:hover,
+.br-menu-sub .sub-link:focus {
+    color: #e98960;
+}
+
+.br-menu-sub .sub-link:hover::before,
+.br-menu-sub .sub-link:focus::before {
+    width: 20px;
+    left: -11px;
+    opacity: 1;
+    background-color: #e98960;
+}
+
+.br-menu-sub .sub-link.active {
+    color: #f26628;
+}
+
+.br-menu-sub .sub-link.active::before {
+    width: 20px;
+    left: -11px;
+    opacity: 1;
+    background-color: #f26628;
+}
+
+
+/*  step wixard  */
+
+.wizard>.content {
+    background-color: #fff;
+    min-height: 150px;
+    padding: 20px;
+    border-radius: 3px;
+}
+
+.wizard>.actions>ul>li:last-child a {
+    background-color: #f26628;
+}
+
+.wizard>.actions a,
+.wizard>.actions a:hover,
+.wizard>.actions a:active {
+    display: block;
+    background-color: #f26628;
+    padding: 9px 25px;
+    line-height: 1.573;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.wizard>.actions>ul>li.disabled>a {
+    background: white;
+}
+
+
+/* button custom  */
+
+.btn-custom {
+    color: #fff;
+    background-color: #f26628;
+    border-color: #f26628;
+}
+
+.btn-custom:hover {
+    color: #fff;
+    background-color: #ff9756;
+    border-color: #f26628;
+}
+
+.btn-custom:focus,
+.btn-custom.focus {
+    box-shadow: 0 0 0 0.2rem rgba(205, 70, 22, 0.8);
+}
+
+
+/* form control  */
+
+.form-control:focus,
+.dataTables_filter input:focus {
+    color: #495057;
+    background-color: #fff;
+    border-color: #f26628;
+    outline: 0;
+    box-shadow: none;
+}
+
+
+/* date time pickers */
+
+.bootstrap-datetimepicker-widget .timepicker {
+    border: 2px dotted #a5a5a5;
+    border-radius: 30px;
+    margin: 0 5px;
+    padding: 0 5px;
+    /* background: url(../images/clock-bg-sm.png) center no-repeat; */
+    background-size: 192px;
+}
+
+
+/* spiner  */
+
+@-webkit-keyframes spinner-border {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes spinner-border {
+    to {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    border: 0.25em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: spinner-border 0.75s linear infinite;
+    animation: spinner-border 0.75s linear infinite;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.2em;
+}
+
+@-webkit-keyframes spinner-grow {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes spinner-grow {
+    0% {
+        -webkit-transform: scale(0);
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.spinner-grow {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: text-bottom;
+    background-color: currentColor;
+    border-radius: 50%;
+    opacity: 0;
+    -webkit-animation: spinner-grow 0.75s linear infinite;
+    animation: spinner-grow 0.75s linear infinite;
+}
+
+.spinner-grow-sm {
+    width: 1rem;
+    height: 1rem;
+}
+
+.spinner-border,
+.spinner-grow {
+    vertical-align: middle;
+}
+
+
+/* input image  */
+
+.image-upload>input {
+    display: none;
+}
