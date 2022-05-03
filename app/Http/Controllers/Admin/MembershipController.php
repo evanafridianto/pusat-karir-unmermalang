@@ -54,7 +54,7 @@ class MembershipController extends Controller
                                 <div class="dropdown-menu pd-10 wd-200">
                                     <nav class="nav nav-style-1 flex-column">' . $status . '
                                     <a href="javascript:void(0)" type="button" onclick="destroy(' . $row->id . ')" class="nav-link"><i class="fa fa-trash"></i> Hapus</a>
-                                    <a target="_blank" href="' . route('seeker.profile', $row->user->username) . '" class="nav-link"><i class="fa fa-user"></i> Profil</a>
+                                    <a target="_blank" href="' . route($row->user->userable_type == 'App\Models\Employer' ? 'employer.profile' : 'seeker.profile', $row->user->username) . '" class="nav-link"><i class="fa fa-user"></i> Profil</a>
 
                                     </nav>
                                 </div>

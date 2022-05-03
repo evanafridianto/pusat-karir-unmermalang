@@ -52,9 +52,13 @@ Route::get('article/read/{slug}', [FrontController::class, 'article_read'])->nam
 Route::get('province/show', [ProvinceController::class, 'show'])->name('province.show');
 Route::get('city/byprov/{id}', [CityController::class, 'byProv'])->name('city.by.prov');
 
-Route::get('employer/{username}/profile', [EmployerProfileController::class, 'index'])->name('employer.profile');
-Route::get('seeker/{username}/profile', [SeekerProfileController::class, 'index'])->name('seeker.profile');
 
+Route::group(['prefix' => 'seeker'], function () {
+    Route::get('seeker/{username}/profile', [SeekerProfileController::class, 'index'])->name('seeker.profile');
+});
+Route::group(['prefix' => 'employer'], function () {
+    Route::get('{username}/profile', [EmployerProfileController::class, 'index'])->name('employer.profile');
+});
 
 
 // pages front
