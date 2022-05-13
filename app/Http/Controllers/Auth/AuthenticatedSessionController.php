@@ -24,7 +24,7 @@ class AuthenticatedSessionController extends Controller
 
         $data = [
             'title' => 'Login',
-            'pages' => Page::get(),
+            'pages' => Page::where('carousel', '0')->where('status', 'active')->get(),
         ];
         return view('auth.login', $data);
     }

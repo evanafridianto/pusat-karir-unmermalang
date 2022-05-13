@@ -86,8 +86,19 @@
                             <h3>Kategori </h3>
                         </div>
                         <!-- Blog -->
-                        @foreach ($categories as $category)
-                            <article class="mb-3">
+                        <!-- Unfold (Dropdown) -->
+                        <div class="hs-unfold">
+                            <button type="button" class="js-hs-unfold-invoker btn btn-sm btn-light dropdown-toggle"
+                                data-hs-unfold-options='{
+                           "target": "#dropdownSingleButton"
+                         }'>Pilih Kategori</button>
+
+                            <div id="dropdownSingleButton" class="hs-unfold-content dropdown-menu">
+                                <a class="dropdown-item" href="{{ route('article') }}">Semua Kategori</a>
+                                @foreach ($categories as $category)
+                                    <a class="dropdown-item"
+                                        href="{{ route('article') }}?category={{ $category->slug }}">{{ $category->name }}</a>
+                                    {{-- <article class="mb-3">
                                 <a class="card card-frame p-3"
                                     href="{{ route('article') }}?category={{ $category->slug }}">
                                     <div class="media align-items-center">
@@ -97,8 +108,14 @@
                                         <i class="fas fa-angle-right"></i>
                                     </div>
                                 </a>
-                            </article>
-                        @endforeach
+                            </article> --}}
+                                @endforeach
+
+
+                            </div>
+                        </div>
+                        <!-- End Unfold (Dropdown) -->
+
                         <!-- End Blog -->
 
                     </div>
@@ -108,13 +125,13 @@
 
                     <div class="js-sticky-block"
                         data-hs-sticky-block-options='{
-                                                                                                                                                                                                                                                                                                                                                                                                    "parentSelector": "#stickyBlockStartPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                    "breakpoint": "lg",
-                                                                                                                                                                                                                                                                                                                                                                                                    "startPoint": "#stickyBlockStartPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                    "endPoint": "#stickyBlockEndPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                    "stickyOffsetTop": 24,
-                                                                                                                                                                                                                                                                                                                                                                                                    "stickyOffsetBottom": 24
-                                                                                                                                                                                                                                                                                                                                                                                                    }'>
+                                                                                                                                                                                                                                                                                                                                                                                                                        "parentSelector": "#stickyBlockStartPoint",
+                                                                                                                                                                                                                                                                                                                                                                                                                        "breakpoint": "lg",
+                                                                                                                                                                                                                                                                                                                                                                                                                        "startPoint": "#stickyBlockStartPoint",
+                                                                                                                                                                                                                                                                                                                                                                                                                        "endPoint": "#stickyBlockEndPoint",
+                                                                                                                                                                                                                                                                                                                                                                                                                        "stickyOffsetTop": 24,
+                                                                                                                                                                                                                                                                                                                                                                                                                        "stickyOffsetBottom": 24
+                                                                                                                                                                                                                                                                                                                                                                                                                        }'>
                         <div class="mb-7">
                             <div class="mb-3">
                                 <h3>Tags </h3>

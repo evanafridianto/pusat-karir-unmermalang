@@ -3,14 +3,18 @@
 namespace Database\Seeders;
 
 
+use App\Models\Tag;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Address;
+use App\Models\Article;
 use App\Models\Category;
 use App\Models\Employer;
 use App\Models\Permission;
 use Illuminate\Support\Str;
+use Faker\Generator as Faker;
 use App\Models\EmployerAddress;
+use App\Models\Vacancy;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -24,6 +28,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
         // // user
         // User::insert(
         //     [
@@ -833,5 +838,23 @@ class DatabaseSeeder extends Seeder
         $category->created_at = date('Y-m-d H:i:s');
         $category->updated_at = date('Y-m-d H:i:s');
         $category->save();
+
+
+        $category = Category::factory(20)->create();
+        $article =  Article::factory(20)->create();
+        $vacancy =  Vacancy::factory(20)->create();
+        $tag =  Tag::factory(20)->create();
+
+        Article::All()->each(function ($article) use ($tag) {
+            $article->tags()->attach(
+                $tag->random(rand(1, 3))->pluck('id')->toArray()
+            );
+        });
+        Vacancy::All()->each(function ($vacancy) use ($category) {
+            $vacancy->categories()->attach(
+                $category->where('type', 'Major')->random(rand(1, 3))->pluck('id')->toArray()
+            );
+        });
+        Address::factory(20)->create();
     }
 }

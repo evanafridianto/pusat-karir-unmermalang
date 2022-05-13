@@ -62,13 +62,13 @@ Route::group(['prefix' => 'employer'], function () {
 
 
 // pages front
-$pages = Page::get();
+$pages = Page::where('status', 'active')->get();
 foreach ($pages as $key => $page) {
     Route::get($page->slug, function () use ($page) {
         $data = [
             'title'  =>  $page->title,
-            'content' =>  $page->content,
-            'pages' => Page::get(),
+            'page' =>  $page,
+            'pages' => Page::where('status', 'active')->get(),
         ];
         return view('front.pages.page', $data);
     })->name($page->slug);

@@ -18,7 +18,7 @@ class EmailVerificationPromptController extends Controller
      */
     public function __construct()
     {
-        $pages = Page::get();
+        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
         View::share(compact('pages'));
     }
     public function __invoke(Request $request)

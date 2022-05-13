@@ -25,7 +25,7 @@ class FrontController extends Controller
 
     public function __construct()
     {
-        $pages = Page::get();
+        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
         View::share(compact('pages'));
     }
 
@@ -39,6 +39,7 @@ class FrontController extends Controller
                 $query->where('type', 'News');
             })->get(),
             'categories' => Category::where('type', 'Major')->orderBy('name', 'asc')->get(),
+            'carousels' => Page::where('carousel', 1)->where('status', 'active')->get(),
         ];
         return view('front.pages.home', $data);
     }

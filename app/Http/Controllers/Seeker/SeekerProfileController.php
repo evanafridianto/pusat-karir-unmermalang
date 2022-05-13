@@ -30,7 +30,7 @@ class SeekerProfileController extends Controller
 
     public function __construct()
     {
-        $pages = Page::get();
+        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
         View::share(compact('pages'));
     }
     public function index(Request $request, $username)
@@ -87,8 +87,8 @@ class SeekerProfileController extends Controller
     {
         if ($step == 0) {
             $validator = Validator::make($request->all(), [
-                'first_name' => 'required|string|max:255|regex:/^[a-zA-ZÑñ\s]+$/',
-                'last_name' => 'required|string|max:255|regex:/^[a-zA-ZÑñ\s]+$/',
+                'first_name' => 'required|string|max:255',
+                'last_name' => 'required|string|max:255',
                 'logo' => 'image|mimes:jpeg,jpg,png,gif|max:5120|nullable',
                 'date_of_birth' =>  'required|date_format:Y-m-d',
                 'gender' =>  'required',
@@ -119,7 +119,7 @@ class SeekerProfileController extends Controller
             $validator = Validator::make($request->all(), [
                 'last_education' => 'required',
                 'major' => 'required',
-                'institute_name' => 'required|string|max:255|regex:/^[a-zA-ZÑñ\s]+$/',
+                'institute_name' => 'required|string|max:255',
                 'graduation_year' =>  'required',
                 // 'gpa' => 'string',
             ]);
