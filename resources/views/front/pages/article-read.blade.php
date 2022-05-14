@@ -12,9 +12,7 @@
                      <div class="row align-items-md-center">
                          <div class="col-md-7 mb-5 mb-md-0">
                              <div class="media align-items-center">
-                                 {{-- <div class="avatar avatar-circle"> --}}
                                  <i class="fa-solid fa-user mr-1"></i>
-                                 {{-- </div> --}}
                                  <div class="media-body font-size-1 ml-3">
                                      <span class="h6">
                                          {{ ucfirst(strtok($article->user->email, '@')) }}
@@ -40,8 +38,8 @@
                  @if (!empty($article->thumbnail) && file_exists('storage/article/' . $article->thumbnail))
                      <img class="img-fluid rounded" src="{{ asset('storage/article/' . $article->thumbnail) }}"
                          alt="Image Description">
-                 @else
-                     ''
+                 @elseif(Str::contains($article->thumbnail, 'https://'))
+                     <img class="img-fluid rounded" src="{{ $article->thumbnail }}" alt="Thumbnail">
                  @endif
                  <div class="mt-8">
                      {!! $article->content !!}
@@ -87,7 +85,7 @@
                                              <small class="d-block">
                                                  {{ $article_related->created_at->diffForHumans() }}</small>
                                          </div>
-                                         <div class="col-5">
+                                         <div class="col-6">
                                              @if (!empty($article_related->thumbnail) && file_exists('storage/article/' . $article_related->thumbnail))
                                                  <img class="img-fluid"
                                                      src="{{ asset('storage/article/' . $article_related->thumbnail) }}"

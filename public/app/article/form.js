@@ -51,6 +51,12 @@ $(function() {
                             data.thumbnail +
                             '"></img>'
                         );
+                    } else if (data.thumbnail.includes("https://")) {
+                        $("#img-preview").html(
+                            '<img class="img-thumbnail wd-150 ht-80 edit-thumbnail" src="' +
+                            data.thumbnail +
+                            '"></img>'
+                        );
                     } else {
                         $("#img-preview").html("Thumbnail tidak ditemukan");
                     }

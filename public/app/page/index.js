@@ -17,10 +17,27 @@ $(function() {
         columns: [{
                 data: "DT_RowIndex",
                 name: "DT_RowIndex",
+                orderable: false,
+                searchable: false,
             },
             {
                 data: "title",
                 name: "title",
+                className: "align-middle",
+            },
+            {
+                data: "image",
+                name: "image",
+                className: "align-middle",
+            },
+            {
+                data: "carousel",
+                name: "carousel",
+                className: "align-middle",
+            },
+            {
+                data: "status",
+                name: "status",
                 className: "align-middle",
             },
             {

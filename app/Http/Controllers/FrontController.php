@@ -25,7 +25,7 @@ class FrontController extends Controller
 
     public function __construct()
     {
-        $pages = Page::get();
+        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
         View::share(compact('pages'));
     }
 
@@ -39,6 +39,7 @@ class FrontController extends Controller
                 $query->where('type', 'News');
             })->get(),
             'categories' => Category::where('type', 'Major')->orderBy('name', 'asc')->get(),
+            'carousels' => Page::where('carousel', 1)->where('status', 'active')->get(),
         ];
         return view('front.pages.home', $data);
     }
@@ -73,7 +74,8 @@ class FrontController extends Controller
         $data = [
             'title'  => 'Berita & Event',
             'articles' =>  Article::latest()->filter(request(['search', 'category', 'tags']))->paginate(6)->withQueryString(),
-            'tags' => Tag::limit(5)->get(),
+            'tags' => Tag::get(),
+            // 'tags' => Tag::limit(5)->get(),
             'categories' => Category::where('type', 'News')->orWhere('type', 'Events')->orderBy('name', 'asc')->get(),
         ];
         return view('front.pages.article', $data);

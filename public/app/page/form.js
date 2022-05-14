@@ -34,6 +34,21 @@ $(function() {
                 $('[name="slug"]').val(data.slug);
                 $('[name="content"]').val(data.content);
                 CKEDITOR.instances["editor"].setData(data.content);
+
+                $('[name="old_image"]').val(data.image);
+                if (data.image && data.image != "") {
+                    if (data.file_exists) {
+                        $("#img-preview").html(
+                            '<img class="img-thumbnail wd-150 ht-80 edit-thumbnail" src="/storage/page/' +
+                            data.image +
+                            '"></img>'
+                        );
+                    } else {
+                        $("#img-preview").html("Gambar tidak ditemukan");
+                    }
+                } else {
+                    $("#img-preview").html("Gambar tidak ditemukan");
+                }
             },
             error: function(response) {
                 console.log(response);
@@ -47,6 +62,11 @@ $(function() {
             },
         });
     }
+
+    $('[name="image"]').change(function() {
+        readURL(this);
+        // $("#thumbnail-preview").prev().remove();
+    });
 });
 
 // data store

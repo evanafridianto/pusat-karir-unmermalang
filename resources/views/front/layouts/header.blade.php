@@ -1,7 +1,11 @@
  <!-- ========== HEADER ========== -->
- <header id="header"
+ {{-- <header id="header"
      class="header header-box-shadow-on-scroll header-white-bg-on-scroll header-sticky-top-lg header-bg-transparent-lg"
      data-hs-header-options='{
+          "fixMoment": 1000,
+          "fixEffect": "slide"
+        }'> --}}
+ <header id="header" class="header header-sticky-top" data-hs-header-options='{
           "fixMoment": 1000,
           "fixEffect": "slide"
         }'>
@@ -70,9 +74,12 @@
                                          href="/membership">Gabung</a>
 
                                      @auth
-                                         <a class="dropdown-item"
-                                             href="{{ route('pay.confirmation', Auth::user()->username) }}">Konfirmasi</a>
+                                         @if (Auth::user()->hasRole('employer') || Auth::user()->hasRole('seeker'))
+                                             <a class="dropdown-item"
+                                                 href="{{ route('pay.confirmation', Auth::user()->username) }}">Konfirmasi</a>
+                                         @endif
                                      @endauth
+
                                  </div>
                              </div>
                          </div>
@@ -95,8 +102,10 @@
                                  <a class="dropdown-item {{ \Request::is('/membership') ? 'active' : '' }}"
                                      href="/membership">Gabung</a>
                                  @auth
-                                     <a class="dropdown-item"
-                                         href="{{ route('pay.confirmation', Auth::user()->username) }}">Konfirmasi</a>
+                                     @if (Auth::user()->hasRole('employer') || Auth::user()->hasRole('seeker'))
+                                         <a class="dropdown-item"
+                                             href="{{ route('pay.confirmation', Auth::user()->username) }}">Konfirmasi</a>
+                                     @endif
                                  @endauth
                              </div>
                          </div>
@@ -106,10 +115,10 @@
                                  <div class="hs-unfold">
                                      <a class="js-hs-unfold-invoker dropdown-nav-link" href="javascript: void(0);"
                                          data-hs-unfold-options='{
-                                                                                                                                                                                                                                                                                "target": "#basicDropdownHover",
-                                                                                                                                                                                                                                                                                "type": "css-animation",
-                                                                                                                                                                                                                                                                                "event": "hover"
-                                                                                                                                                                                                                                                                                }'>{{ Auth::user()->username }}<i
+                                                                                                                                                                                                                                                                                                                    "target": "#basicDropdownHover",
+                                                                                                                                                                                                                                                                                                                    "type": "css-animation",
+                                                                                                                                                                                                                                                                                                                    "event": "hover"
+                                                                                                                                                                                                                                                                                                                    }'>{{ Auth::user()->username }}<i
                                              class="fa-solid fa-circle-user ml-1"></i></a>
                                      <div id="basicDropdownHover" class="hs-unfold-content dropdown-menu">
                                          @if (Auth::user()->hasRole('employer'))

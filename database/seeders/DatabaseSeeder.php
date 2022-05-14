@@ -3,14 +3,19 @@
 namespace Database\Seeders;
 
 
+use App\Models\Tag;
 use App\Models\Role;
 use App\Models\User;
 use App\Models\Address;
+use App\Models\Article;
 use App\Models\Category;
 use App\Models\Employer;
 use App\Models\Permission;
 use Illuminate\Support\Str;
+use Faker\Generator as Faker;
 use App\Models\EmployerAddress;
+use App\Models\Page;
+use App\Models\Vacancy;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -24,6 +29,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+
         // // user
         // User::insert(
         //     [
@@ -833,5 +839,37 @@ class DatabaseSeeder extends Seeder
         $category->created_at = date('Y-m-d H:i:s');
         $category->updated_at = date('Y-m-d H:i:s');
         $category->save();
+
+
+        $title = 'Selamat datang diwebsite resmi Puskar Unmer Malang';
+        $page = new Page;
+        $page->title = $title;
+        $page->slug = Str::slug($title);
+        $page->content = 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam';
+        $page->image = 'slide.jpg';
+        $page->carousel = 1;
+        $page->status = 'active';
+        $page->created_at = date('Y-m-d H:i:s');
+        $page->updated_at = date('Y-m-d H:i:s');
+        $page->save();
+
+
+        $category = Category::factory(20)->create();
+        $article =  Article::factory(20)->create();
+        $vacancy =  Vacancy::factory(20)->create();
+        $tag =  Tag::factory(20)->create();
+
+        Article::All()->each(function ($article) use ($tag) {
+            $article->tags()->attach(
+                $tag->random(rand(1, 3))->pluck('id')->toArray()
+            );
+        });
+        Vacancy::All()->each(function ($vacancy) use ($category) {
+            $vacancy->categories()->attach(
+                $category->where('type', 'Major')->random(rand(1, 3))->pluck('id')->toArray()
+            );
+        });
+        Address::factory(20)->create();
+        Page::factory(5)->create();
     }
 }

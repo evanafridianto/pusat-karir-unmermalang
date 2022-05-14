@@ -5,7 +5,7 @@
 
         <!-- JS Implementing Plugins -->
 
-
+        <script src="{{ asset('user/assets/vendor/aos/dist/aos.js') }}"></script>
         {{-- data table --}}
 
 
@@ -82,6 +82,12 @@
                     $('#jsPreloader').fadeOut(100)
                 }, 150)
 
+
+                // initialization of aos
+                AOS.init({
+                    duration: 650,
+                    once: true
+                });
 
             });
         </script>

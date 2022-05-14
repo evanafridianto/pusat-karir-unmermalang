@@ -33,7 +33,7 @@ class RegisteredUserController extends Controller
                 'title' => 'Register',
                 'business_field' => Category::where('type', 'Business Field')->orderBy('name', 'asc')->get(),
                 'major' => Category::where('type', 'Major')->orderBy('name', 'asc')->get(),
-                'pages' => Page::get(),
+                'pages' => Page::where('carousel', '0')->where('status', 'active')->get(),
                 'role' =>  $role,
             ];
             return view('auth.register', $data);
@@ -55,7 +55,7 @@ class RegisteredUserController extends Controller
         if ($request->role == 'employer') {
             if ($step == 0) {
                 $validator = Validator::make($request->all(), [
-                    'company_name' => 'required|string|max:255|regex:/^[a-zA-ZÑñ\s]+$/',
+                    'company_name' => 'required',
                     'tin' =>  'required|numeric|digits:15',
                     // 'tin' =>  'required|numeric',
                     'since' =>  'required',
@@ -162,7 +162,8 @@ class RegisteredUserController extends Controller
                     'major' => 'required',
                     'institute_name' => 'required|string|max:255|regex:/^[a-zA-ZÑñ\s]+$/',
                     'graduation_year' =>  'required',
-                    // 'gpa' => 'string',
+                    // 'gpa' => 'required|regex:^[0-9]{1,3}(,[0-9]{3})*\,[0-9]+$',
+                    'gpa'   =>  'required',
                 ]);
                 if ($validator->fails()) {
                     return response()->json(['error' => $validator->errors(), 'next' => false]);

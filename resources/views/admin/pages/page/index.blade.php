@@ -18,6 +18,9 @@
                             <tr>
                                 <th>#</th>
                                 <th>Judul</th>
+                                <th>Gambar</th>
+                                <th>Tampilkan Banner</th>
+                                <th>Status</th>
                                 <th>Tanggal</th>
                                 <th class="text-center">Aksi</th>
                             </tr>

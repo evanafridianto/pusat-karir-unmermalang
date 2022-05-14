@@ -39,6 +39,7 @@
                             </div>
                         </div><!-- col-4 -->
                     @endif
+
                     <div class="col-lg-12">
                         <div class="form-group">
                             <label class="form-control-label">Konten</label>
@@ -46,6 +47,38 @@
                             <small class="text-danger content"></small>
                         </div>
                     </div><!-- col -->
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <div class="form-group">
+                                <label class="form-control-label">Gambar</label>
+                                <input class="form-control" type="hidden" name="old_image" />
+                                <input class="form-control" type="file" name="image" accept="image/*" />
+                                <small class="text-danger"></small>
+                                <small class="text-info">Upload gambar uk 1920x800 jika ditampilkan sbg banner</small>
+                            </div>
+                            <div id="img-preview">
+                            </div>
+                        </div>
+                    </div><!-- col-8 -->
+
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label">Status</label>
+                            <select name="status" class="form-control">
+                                <option value="active">Aktif</option>
+                                <option value="inactive">Tidak Aktif</option>
+                            </select>
+                        </div>
+                    </div><!-- col-4 -->
+                    <div class="col-lg-4">
+                        <div class="form-group">
+                            <label class="form-control-label">Tambahkan ke Banner Beranda</label>
+                            <select name="carousel" class="form-control">
+                                <option value="0">Tidak</option>
+                                <option value="1">Ya</option>
+                            </select>
+                        </div>
+                    </div><!-- col-4 -->
                 </div><!-- row -->
                 <div class="form-layout-footer">
                     <button type="button" id="btn-spinner" onclick="store()" class="btn btn-custom"><i

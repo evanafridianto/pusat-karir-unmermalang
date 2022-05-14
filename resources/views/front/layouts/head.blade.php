@@ -44,7 +44,7 @@
     <script src="{{ asset('user/assets/vendor/dropzone/dist/dropzone.min.js') }}"></script>
     {{-- <link rel="stylesheet" href="{{ asset('user/assets/vendor/dropzone/dist/dropzone.min.css') }}">
     <script src="{{ asset('user/assets/vendor/dropzone/dist/dropzone.min.js') }}"></script> --}}
-
+    <link rel="stylesheet" href="{{ asset('user/assets/vendor/aos/dist/aos.css') }}">
     <link href="{{ asset('admin/lib/datetimepicker/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
     <!-- Toastr -->
     <link rel="stylesheet" href="{{ asset('user/assets/vendor/jquery-confirm/jquery-confirm.min.css') }}">

@@ -15,9 +15,12 @@ class CreatePagesTable extends Migration
     {
         Schema::create('pages', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 100);
-            $table->string('slug', 150);
+            $table->string('title');
+            $table->string('slug');
             $table->longText('content');
+            $table->string('image')->nullable();
+            $table->enum('carousel', [1, 0])->default(0);
+            $table->enum('status', ['active', 'inactive'])->default('active');
             $table->timestamps();
         });
     }

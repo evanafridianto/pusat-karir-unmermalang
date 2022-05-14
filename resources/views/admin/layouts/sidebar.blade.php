@@ -21,7 +21,7 @@
              </li><!-- br-menu-item -->
              <li class="br-menu-item">
                  <a href="#"
-                     class="br-menu-link with-sub {{ \Request::is('admin/applicant') ||\Request::is('admin/vacancy') ||\Request::is('admin/seeker') ||\Request::is('admin/employer') ||\Request::is('admin/membership')? 'active': '' }}">
+                     class="br-menu-link with-sub {{ \Request::is('admin/applicant') || \Request::is('admin/vacancy') || \Request::is('admin/seeker') || \Request::is('admin/employer') || \Request::is('admin/membership') ? 'active' : '' }}">
                      <i class="menu-item-icon icon ion-ios-briefcase-outline tx-22"></i>
                      <span class="menu-item-label">Karir</span>
                  </a><!-- br-menu-link -->
@@ -54,7 +54,7 @@
                              class="sub-link {{ \Request::is('admin/article') ? 'active' : '' }}">Artikel</a>
                      </li>
                      <li class="sub-item"><a href="{{ route('admin.page') }}"
-                             class="sub-link {{ \Request::is('admin/page') ? 'active' : '' }}">Halaman</a>
+                             class="sub-link {{ \Request::is('admin/page') ? 'active' : '' }}">Halaman & Banner</a>
                      </li>
                  </ul>
              </li><!-- br-menu-item -->

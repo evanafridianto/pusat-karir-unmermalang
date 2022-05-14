@@ -29,7 +29,8 @@ class ArticleController extends Controller
                 ->editColumn(
                     'thumbnail',
                     function ($row) {
-                        return $row->thumbnail != "" && Storage::exists('public/article/' . $row->thumbnail) ? '<a href="' . Storage::url('public/article/' . $row->thumbnail) . '" target="_blank"><img class="img-thumbnail wd-150 ht-80 " src="' . Storage::url('public/article/' . $row->thumbnail) . '"></a>' : 'Thumbnail tidak ditemukan';
+                        return $row->thumbnail != "" && Storage::exists('public/article/' . $row->thumbnail) ? '<a href="' . Storage::url('public/article/' . $row->thumbnail) . '" target="_blank"><img class="img-thumbnail wd-150 ht-80 " src="' . Storage::url('public/article/' . $row->thumbnail) . '"></a>' : (Str::contains($row->thumbnail, 'https://') ? '<a href="' . $row->thumbnail . '" target="_blank"><img class="img-thumbnail wd-150 ht-80 " src="' . $row->thumbnail . '"></a>' : 'Thumbnail tidak ditemukan');
+                        // return $row->thumbnail != "" && Storage::exists('public/article/' . $row->thumbnail) ? '<a href="' . Storage::url('public/article/' . $row->thumbnail) . '" target="_blank"><img class="img-thumbnail wd-150 ht-80 " src="' . Storage::url('public/article/' . $row->thumbnail) . '"></a>' : 'Thumbnail tidak ditemukan';
                     }
                 )
                 ->editColumn(

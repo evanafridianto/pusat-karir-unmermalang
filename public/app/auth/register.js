@@ -22,6 +22,7 @@ $(function() {
         dateFormat: "yy-mm-dd",
         changeMonth: true,
         changeYear: true,
+        yearRange: "1980:" + new Date().getFullYear(),
     });
 });
 
@@ -230,12 +231,12 @@ function register(step) {
         error: function(response) {
             if (step == 0) {
                 btnNext0.html(
-                    'Berikutnyar<i class="fa fa-angle-right fa-sm ml-1"></i>'
+                    'Berikutnya<i class="fa fa-angle-right fa-sm ml-1"></i>'
                 );
                 btnNext0.attr("disabled", false);
             } else if (step == 1) {
                 btnNext1.html(
-                    'Berikutnyar<i class="fa fa-angle-right fa-sm ml-1"></i>'
+                    'Berikutnya<i class="fa fa-angle-right fa-sm ml-1"></i>'
                 );
                 btnNext1.attr("disabled", false);
             } else if (step == 2) {
@@ -246,7 +247,7 @@ function register(step) {
                     btnRegister.attr("disabled", false);
                 } else {
                     btnNext2.html(
-                        'Berikutnyar<i class="fa fa-angle-right fa-sm ml-1"></i>'
+                        'Berikutnya<i class="fa fa-angle-right fa-sm ml-1"></i>'
                     );
                     btnNext2.attr("disabled", false);
                 }

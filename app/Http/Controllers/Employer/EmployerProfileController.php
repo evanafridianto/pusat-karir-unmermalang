@@ -30,7 +30,7 @@ class EmployerProfileController extends Controller
 
     public function __construct()
     {
-        $pages = Page::get();
+        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
         View::share(compact('pages'));
     }
 

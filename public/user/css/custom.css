@@ -630,3 +630,11 @@ p {
 .image-upload>input {
     display: none;
 }
+
+
+/* overflow */
+
+.overflow {
+    height: 200px;
+    overflow-y: scroll;
+}

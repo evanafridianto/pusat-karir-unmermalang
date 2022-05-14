@@ -10,46 +10,58 @@
             <!-- Blogs Section -->
             <div class="row justify-content-lg-between">
                 <div class="col-lg-8">
+
                     <!-- Blog -->
                     @if (!empty($articles) && $articles->count())
                         @foreach ($articles as $article)
-                            <!-- Blog -->
-                            <article class="row mb-7">
-                                <div class="col-md-5">
-                                    @if (!empty($article->thumbnail) && file_exists('storage/article/' . $article->thumbnail))
-                                        <img class="card-img"
-                                            src="{{ asset('storage/article/' . $article->thumbnail) }}" alt="Thumbnail">
-                                    @else
-                                        <img class="card-img" src="{{ asset('storage/article/no-thumbnail.jpg') }}"
-                                            alt="Thumbnail">
-                                    @endif
-                                </div>
-                                <div class="col-md-7">
-                                    <div class="card-body d-flex flex-column h-100 px-0">
-                                        <span class="d-block mb-2">
+                            <!-- Blogs Section -->
+                            <!-- Blog Card -->
+                            <div class="container">
+                                <article class="row align-items-lg-center">
+                                    <div class="col-lg-6">
+                                        {{-- <img class="img-fluid rounded" src="../../assets/img/900x450/img1.jpg"
+                                            alt="Image Description"> --}}
+                                        @if (!empty($article->thumbnail) && file_exists('storage/article/' . $article->thumbnail))
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('storage/article/' . $article->thumbnail) }}"
+                                                alt="Thumbnail">
+                                        @elseif(Str::contains($article->thumbnail, 'https://'))
+                                            <img class="img-fluid rounded" src="{{ $article->thumbnail }}" alt="Thumbnail">
+                                        @else
+                                            <img class="img-fluid rounded"
+                                                src="{{ asset('storage/article/no-thumbnail.jpg') }}" alt="Thumbnail">
+                                        @endif
+                                    </div>
 
-                                            <a class="font-weight-bold"
-                                                href="{{ route('article') }}?category={{ $article->category->slug }}">{{ $article->category->name }}</a>
-                                        </span>
-                                        <h3><a class="text-inherit"
-                                                href="{{ route('article.read', $article->slug) }}">{{ $article->title }}</a>
-                                        </h3>
-                                        <p>{!! strip_tags(substr($article->content, 0, 100)) . '...' !!}</p>
-                                        <div class="media align-items-center mt-auto">
-                                            <i class="fa fa-user d-block d-sm-inline-block mb-1 mb-sm-0 mr-3"></i>
-                                            <div class="media-body">
-                                                <span class="text-dark">
-                                                    <span
-                                                        class="d-inline-block text-inherit font-weight-bold">{{ ucfirst(strtok($article->user->email, '@')) }}</span>
-                                                </span>
-                                                <small class="d-block">
-                                                    {{ $article->created_at->diffForHumans() }}</small>
+                                    <div class="col-lg-6">
+                                        <div class="py-5 px-lg-3">
+                                            <span class="d-block mb-2">
+                                                <a class="small font-weight-bold text-cap"
+                                                    href="{{ route('article') }}?category={{ $article->category->slug }}">{{ $article->category->name }}</a>
+                                            </span>
+
+                                            <h3><a class="text-inherit"
+                                                    href="{{ route('article.read', $article->slug) }}">{{ $article->title }}</a>
+                                            </h3>
+                                            <div class="media align-items-center mt-auto mb-2">
+                                                <i class="fa fa-user d-block d-sm-inline-block mb-1 mb-sm-0 mr-3"></i>
+                                                <div class="media-body">
+                                                    <span class="text-dark">
+                                                        <span
+                                                            class="d-inline-block text-inherit font-weight-bold">{{ ucfirst(strtok($article->user->email, '@')) }}</span>
+                                                    </span>
+                                                    <small class="d-block">
+                                                        {{ $article->created_at->diffForHumans() }}</small>
+                                                </div>
                                             </div>
+                                            <p>{!! strip_tags(Str::words($article->content, 10)) !!}</p>
+
+                                            <a href="{{ route('article.read', $article->slug) }}">Selengkapnya<i
+                                                    class="fas fa-angle-right fa-sm ml-1"></i></a>
                                         </div>
                                     </div>
-                                </div>
-                            </article>
-                            <!-- End Blog -->
+                                </article>
+                            </div>
                             <!-- End Blog -->
                         @endforeach
                     @else
@@ -86,8 +98,20 @@
                             <h3>Kategori </h3>
                         </div>
                         <!-- Blog -->
-                        @foreach ($categories as $category)
-                            <article class="mb-3">
+                        <!-- Unfold (Dropdown) -->
+                        <div class="hs-unfold">
+                            <button type="button" class="js-hs-unfold-invoker btn btn-sm btn-light dropdown-toggle"
+                                data-hs-unfold-options='{
+                                                                                                                                                                                                                                                                                                                                                           "target": "#dropdownSingleButton"
+                                                                                                                                                                                                                                                                                                                                                         }'>Pilih
+                                Kategori</button>
+
+                            <div id="dropdownSingleButton" class="hs-unfold-content dropdown-menu">
+                                <a class="dropdown-item" href="{{ route('article') }}">Semua Kategori</a>
+                                @foreach ($categories as $category)
+                                    <a class="dropdown-item"
+                                        href="{{ route('article') }}?category={{ $category->slug }}">{{ $category->name }}</a>
+                                    {{-- <article class="mb-3">
                                 <a class="card card-frame p-3"
                                     href="{{ route('article') }}?category={{ $category->slug }}">
                                     <div class="media align-items-center">
@@ -97,28 +121,18 @@
                                         <i class="fas fa-angle-right"></i>
                                     </div>
                                 </a>
-                            </article>
-                        @endforeach
-                        <!-- End Blog -->
-
-                    </div>
-
-                    <!-- Sticky Block Start Point -->
-                    <div id="stickyBlockStartPoint"></div>
-
-                    <div class="js-sticky-block"
-                        data-hs-sticky-block-options='{
-                                                                                                                                                                                                                                                                                                                                                                                                    "parentSelector": "#stickyBlockStartPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                    "breakpoint": "lg",
-                                                                                                                                                                                                                                                                                                                                                                                                    "startPoint": "#stickyBlockStartPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                    "endPoint": "#stickyBlockEndPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                    "stickyOffsetTop": 24,
-                                                                                                                                                                                                                                                                                                                                                                                                    "stickyOffsetBottom": 24
-                                                                                                                                                                                                                                                                                                                                                                                                    }'>
-                        <div class="mb-7">
-                            <div class="mb-3">
-                                <h3>Tags </h3>
+                            </article> --}}
+                                @endforeach
                             </div>
+                        </div>
+                        <!-- End Unfold (Dropdown) -->
+                        <!-- End Blog -->
+                    </div>
+                    <div class="mb-7">
+                        <div class="mb-3">
+                            <h3>Tags</h3>
+                        </div>
+                        <div class="overflow">
                             @if (!empty($tags) && $tags->count())
                                 @foreach ($tags as $tag)
                                     <a class="btn btn-xs btn-soft-secondary mb-1"
@@ -128,15 +142,16 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Pagination -->
-                <nav aria-label="Page navigation">
-                    <ul class="pagination mb-0">
-                        {{ $articles->links() }}
-                    </ul>
-                </nav>
-                <!-- End Pagination -->
             </div>
-            <!-- End Blogs Section -->
+
+            <!-- Pagination -->
+            <nav aria-label="Page navigation">
+                <ul class="pagination mb-0">
+                    {{ $articles->links() }}
+                </ul>
+            </nav>
+            <!-- End Pagination -->
+        </div>
+        <!-- End Blogs Section -->
     </main>
 @endsection
