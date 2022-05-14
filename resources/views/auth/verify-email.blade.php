@@ -47,14 +47,13 @@
                 <div class="col-lg-6">
                     <div class="mb-5">
                     </div>
-                    <form class="card border w-md-85 w-lg-100 mx-md-auto" method="POST" action="{{ route('login') }}">
+                    <div class="card border w-md-85 w-lg-100 mx-md-auto">
                         @csrf
-                        <div class="card-header bg-custom text-white text-center py-4 px-5 px-md-6">
+                        <div class=" card-header bg-custom text-white text-center py-4 px-5 px-md-6">
                             <h4 class="text-white mb-0">VERIFIKASI EMAIL</h4>
                         </div>
                         <div class="card-body p-md-6">
                             <div class="row">
-
 
                                 <div class="col-sm-12">
                                     @if (session('status') == 'verification-link-sent')
@@ -100,7 +99,7 @@
                                 </div>
                             </div>
                         </div>
-                    </form>
+                    </div>
                     <!-- End Form -->
                 </div>
             </div>

@@ -33,7 +33,6 @@ class RegisteredUserController extends Controller
                 'title' => 'Register',
                 'business_field' => Category::where('type', 'Business Field')->orderBy('name', 'asc')->get(),
                 'major' => Category::where('type', 'Major')->orderBy('name', 'asc')->get(),
-                'pages' => Page::where('carousel', '0')->where('status', 'active')->get(),
                 'role' =>  $role,
             ];
             return view('auth.register', $data);

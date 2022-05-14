@@ -30,27 +30,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        // // user
-        // User::insert(
-        //     [
-        //         'email' => 'creativedevelopment.id@gmail.com',
-        //         'password' => bcrypt('password'),
-        //         'userable_type' => 'App\Models\Employer',
-        //         'userable_id' => 2,
-        //         'created_at' => date('Y-m-d H:i:s'),
-        //         'updated_at' => date('Y-m-d H:i:s'),
-        //     ],
-        //     [
-        //         'email' => 'evan@gmail.com',
-        //         'password' => bcrypt('12345678'),
-        //         'userable_type' => 'App\Models\Employer',
-        //         'userable_id' => 1,
-        //         'created_at' => date('Y-m-d H:i:s'),
-        //         'updated_at' => date('Y-m-d H:i:s'),
-        //     ]
-
-        // );
-
         $path = public_path('eplusgo_wilayah.sql');
         $sql = file_get_contents($path);
         DB::unprepared($sql);
@@ -85,24 +64,24 @@ class DatabaseSeeder extends Seeder
         $employer->company_name = 'Pusat Karir Unmer Malang';
         $employer->since = '1964';
         $employer->telp = '0853453444546';
-        $employer->tin = '345345344534';
+        $employer->tin = '111111111111111';
         $employer->business_scale = 'Big';
         $employer->category_id = $category->id;
         $employer->number_of_employee = '>500';
         $employer->status = 'Verified';
-        $employer->logo = 'puskar-logo.png';
-        $employer->website = 'pusatkarir.unmer.ac.id';
+        $employer->logo = 'pusat-karir-unmer-malang.png';
+        $employer->website = 'https://pusatkarir.unmer.ac.id/';
 
         $address = new Address();
         $address->province_id = 15;
         $address->city_id = 232;
-        $address->street = 'Jalan Terusan Dieng No. 62-64';
+        $address->street = 'Jalan Terusan Dieng No. 62-64, Pisang Candi, Sukun';
         $address->zip_code = '65146';
 
 
         $user = new User;
         $user->email = 'pusatkarir@unmer.ac.id';
-        $user->username = 'pusatkair-unmermalang';
+        $user->username = 'pusatkarir-unmermalang';
         $user->password = Hash::make(12345678);
 
         $employer->save();
@@ -856,7 +835,20 @@ class DatabaseSeeder extends Seeder
         $page->save();
 
 
-        // https://via.placeholder.com/1920x800.png/0000bb?text=quod
+        $name = 'Term and conditions';
+        $page = new Page;
+        $page->name = $name;
+        $page->title = 'Syarat & Ketentuan Pendaftar Puskar Unmer';
+        $page->slug = Str::slug($name);
+        $page->content = 'Viverra si ridiculus penatibus letius adipiscing platea nec ac id dignissim nibh commodo vehicula ornare interdum eros cubilia nascetur mus egestas non etiam dis sociosqu pulvinar vivamus auctor laoreet conubia lobortis fermentum ipsum duis dui hendrerit porttitor himenaeos cursus diam mi convallis condimentum inceptos massa fusce donec tellus purus et elit euismod curae lorem in feugiat ullamcorper class augue neque gravida vel hac senectus finibus imperdiet vulputate aenean odio primis rutrum justo dapibus montes';
+        $page->image = 'https://via.placeholder.com/1920x800.png/003300?text=ut';
+        $page->carousel = '0';
+        $page->status = 'active';
+        $page->created_at = date('Y-m-d H:i:s');
+        $page->updated_at = date('Y-m-d H:i:s');
+        $page->save();
+
+
         $page = new Page;
         $page->name = 'Membership';
         $page->title = 'Dapatkan keuntung beragabung menjadi member Puskar Unmer Malang';

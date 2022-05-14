@@ -13,10 +13,10 @@
          <!-- Topbar -->
          <div class="container header-hide-content pt-2">
              <div class="d-flex align-items-center">
-                 <a class="dropdown-nav-link d-flex align-items-center" href="javascript: void(0);"><i
-                         class="fa-solid fa-phone mr-1"></i>
-                     0845-8735-00
-                 </a>
+                 <span class="font-size-1 align-items-center" href="javascript: void(0);">
+                     <i class="fa-solid fa-phone mr-1"></i> {{ $puskar->userable->telp }}
+                     <i class="fa-solid fa-envelope ml-2 mr-1"></i>{{ $puskar->email }}
+                 </span>
                  <div class="ml-auto">
                      <!-- Jump To -->
                      <div class="hs-unfold d-sm-none mr-2">
@@ -115,10 +115,10 @@
                                  <div class="hs-unfold">
                                      <a class="js-hs-unfold-invoker dropdown-nav-link" href="javascript: void(0);"
                                          data-hs-unfold-options='{
-                                                                                                                                                                                                                                                                                                                            "target": "#basicDropdownHover",
-                                                                                                                                                                                                                                                                                                                            "type": "css-animation",
-                                                                                                                                                                                                                                                                                                                            "event": "hover"
-                                                                                                                                                                                                                                                                                                                            }'>{{ Auth::user()->username }}<i
+                                                                                                                                                                                                                                                                                                                                                                                                            "target": "#basicDropdownHover",
+                                                                                                                                                                                                                                                                                                                                                                                                            "type": "css-animation",
+                                                                                                                                                                                                                                                                                                                                                                                                            "event": "hover"
+                                                                                                                                                                                                                                                                                                                                                                                                            }'>{{ Auth::user()->username }}<i
                                              class="fa-solid fa-circle-user ml-1"></i></a>
                                      <div id="basicDropdownHover" class="hs-unfold-content dropdown-menu">
                                          @if (Auth::user()->hasRole('employer'))

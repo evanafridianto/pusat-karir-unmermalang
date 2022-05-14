@@ -24,12 +24,6 @@ class SeekerApplicantController extends Controller
 {
 
     private $mediaCollection  = 'documents';
-
-    public function __construct()
-    {
-        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
-        View::share(compact('pages'));
-    }
     public function index($username, $slug)
     {
         $user = User::where('username', $username)->first();

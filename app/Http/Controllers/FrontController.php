@@ -15,19 +15,12 @@ use App\Models\Membership;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\View;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
 class FrontController extends Controller
 {
-
-    public function __construct()
-    {
-        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
-        View::share(compact('pages'));
-    }
 
     public function index()
     {

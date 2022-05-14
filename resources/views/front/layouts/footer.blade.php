@@ -17,8 +17,9 @@
                             <span class="media">
                                 <span class="fa fa-location-arrow mt-1 mr-1"></span>
                                 <span class="media-body">
-                                    Jalan Terusan Dieng No. 62-64 Klojen, Pisang Candi, Kec. Sukun, Kota Malang,
-                                    Jawa Timur 65146
+                                    {{-- Jalan Terusan Dieng No. 62-64 Klojen, Pisang Candi, Kec. Sukun, Kota Malang,
+                                    Jawa Timur 65146 --}}
+                                    {{ $puskar->userable->address->street . ', ' . $puskar->userable->address->city->name . ', ' . $puskar->userable->address->province->name . ' ' . $puskar->userable->address->zip_code }}
                                 </span>
                             </span>
                         </li>
@@ -26,7 +27,15 @@
                             <span class="media">
                                 <span class="fa-solid fa-phone mt-1 mr-2"></span>
                                 <span class="media-body">
-                                    +1 (062) 109-9222
+                                    {{ $puskar->userable->telp }}
+                                </span>
+                            </span>
+                        </li>
+                        <li class="nav-item">
+                            <span class="media">
+                                <span class="fa-solid fa-envelope mt-1 mr-2"></span>
+                                <span class="media-body">
+                                    {{ $puskar->email }}
                                 </span>
                             </span>
                         </li>
@@ -43,6 +52,8 @@
                                 Karir</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('article') }}">Berita &
                                 Event</a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link" href="/about">Tentang</a>
                         </li>
                         <li class="nav-item">
                             @foreach ($pages as $key => $page)

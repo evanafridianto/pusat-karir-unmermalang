@@ -86,6 +86,7 @@
                             @foreach ($vacancies as $vacancy)
                                 <div class="col-sm-6 col-lg-3 px-2 px-sm-3 mb-3 mb-sm-5">
                                     <!-- Card -->
+
                                     <div class="card card-frame h-100">
                                         <div class="card-header bg-soft-warning text-center rounded-top">
                                             <div class=" d-block rounded p-2 mx-auto">

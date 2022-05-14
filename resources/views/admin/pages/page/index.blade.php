@@ -17,6 +17,7 @@
                         <thead>
                             <tr>
                                 <th>#</th>
+                                <th>Nama Halaman</th>
                                 <th>Judul</th>
                                 <th>Gambar</th>
                                 <th>Tampilkan Banner</th>

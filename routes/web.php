@@ -2,6 +2,7 @@
 
 use App\Models\Tag;
 use App\Models\Page;
+use App\Models\User;
 use App\Models\Article;
 use Illuminate\Support\Facades\Auth;
 use UniSharp\LaravelFilemanager\Lfm;
@@ -10,9 +11,9 @@ use App\Http\Controllers\FrontController;
 use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\Admin\CityController;
 use App\Http\Controllers\Admin\PageController;
-use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\SeekerController;
 use App\Http\Controllers\Admin\ArticleController;
+use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\VacancyController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\EmployerController;
@@ -23,10 +24,10 @@ use App\Http\Controllers\Admin\MembershipController;
 use App\Http\Controllers\Seeker\SeekerProfileController;
 use App\Http\Controllers\Seeker\SeekerApplicantController;
 use App\Http\Controllers\Seeker\SeekerDashboardController;
-use App\Http\Controllers\Employer\EmployerApplicantController;
 use App\Http\Controllers\Employer\EmployerProfileController;
 use App\Http\Controllers\Employer\EmployerVacancyController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Employer\EmployerApplicantController;
 
 
 /*
@@ -69,6 +70,7 @@ foreach ($pages as $key => $page) {
             'title'  =>  $page->title,
             'page' =>  $page,
             'pages' => Page::where('carousel', '0')->where('status', 'active')->get(),
+            'puskar' => User::whereRoleIs('admin')->first()
         ];
         return view('front.pages.page', $data);
     })->name($page->slug);

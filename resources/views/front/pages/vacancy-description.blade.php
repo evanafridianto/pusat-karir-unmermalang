@@ -18,11 +18,11 @@
                         <div class="card-header text-center py-5">
                             <div class="max-w-27rem mx-auto mb-3">
                                 @if (!empty($vacancy->employers->logo) && file_exists('storage/logo/' . $vacancy->employers->logo))
-                                    <img class="img-fluid rounded"
+                                    <img class="avatar-img"
                                         src="{{ asset('storage/logo/' . $vacancy->employers->logo) }}"
                                         alt="Image Description">
                                 @else
-                                    <img class="img-fluid"
+                                    <img class="avatar-img"
                                         src="https://ui-avatars.com/api/?name={{ $vacancy->employers->company_name }}"
                                         alt="Image Description">
                                 @endif

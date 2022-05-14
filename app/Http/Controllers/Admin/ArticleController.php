@@ -151,24 +151,24 @@ class ArticleController extends Controller
                 }
             } else { //update
 
-                if ($request->hasFile('thumbnail')) {
-                    if (Storage::exists('public/article/' . $request->old_thumbnail)) {
-                        Storage::delete('public/article/' . $request->old_thumbnail);
-                    }
-                    $name = 'thumbnail_' . Carbon::now()->timestamp . '.' . $request->file('thumbnail')->getClientOriginalExtension();
-                    $request->thumbnail = $name;
-                    $request->file('thumbnail')->storeAs('article', $name, 'public');
-                }
+
 
                 $article = Article::find($request->id);
                 $article->user_id = $request->user_id;
                 $article->title = $request->title;
                 $article->slug = $request->slug;
-                $article->thumbnail = $request->thumbnail;
+                // $article->thumbnail = $request->thumbnail;
                 // $article->slug = SlugService::createSlug(Article::class, 'slug', $request->title);
                 $article->content =  $request->content;
                 $article->category_id =  $request->category;
-
+                if ($request->hasFile('thumbnail')) {
+                    if (Storage::exists('public/article/' . $request->old_thumbnail)) {
+                        Storage::delete('public/article/' . $request->old_thumbnail);
+                    }
+                    $name = 'thumbnail_' . Carbon::now()->timestamp . '.' . $request->file('thumbnail')->getClientOriginalExtension();
+                    $article->thumbnail = $name;
+                    $request->file('thumbnail')->storeAs('article', $name, 'public');
+                }
 
                 DB::beginTransaction();
                 try {

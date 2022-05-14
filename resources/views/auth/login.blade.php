@@ -9,7 +9,7 @@
                             <h1 class="mb-4">Gabung menjadi member <span class="text-custom">Pusat Karir
                                     Unmer
                                     Malang!</span></h1>
-                            <a href="/memberships" type=" button" class="btn btn-custom">
+                            <a href="/membership" type=" button" class="btn btn-custom">
                                 Gabung Sekarang!
                                 <i class="fa-solid fa-users-line ml-1"></i>
                             </a>

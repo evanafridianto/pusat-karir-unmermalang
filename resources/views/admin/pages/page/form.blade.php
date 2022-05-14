@@ -59,7 +59,7 @@
                         <div class="form-group">
                             <div class="form-group">
                                 <label class="form-control-label">Gambar</label>
-                                <input class="form-control" type="hidden" name="old_image" />
+                                <input class="form-control" type="text" name="old_image" />
                                 <input class="form-control" type="file" name="image" accept="image/*" />
                                 <small class="text-danger"></small>
                                 <small class="text-info">Upload gambar uk 1920x800 jika ditampilkan sbg banner</small>

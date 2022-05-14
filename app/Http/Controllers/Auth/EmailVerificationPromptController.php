@@ -16,11 +16,7 @@ class EmailVerificationPromptController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return mixed
      */
-    public function __construct()
-    {
-        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
-        View::share(compact('pages'));
-    }
+
     public function __invoke(Request $request)
     {
         return $request->user()->hasVerifiedEmail()

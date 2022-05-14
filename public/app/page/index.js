@@ -21,6 +21,11 @@ $(function() {
                 searchable: false,
             },
             {
+                data: "name",
+                name: "name",
+                className: "align-middle",
+            },
+            {
                 data: "title",
                 name: "title",
                 className: "align-middle",

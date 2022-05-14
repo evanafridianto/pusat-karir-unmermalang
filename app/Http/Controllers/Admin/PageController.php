@@ -129,25 +129,22 @@ class PageController extends Controller
                 $page->carousel = $request->carousel;
                 $page->save();
             } else { //update
-
+                $page = Page::find($request->id);
+                $page->name = $request->name;
+                $page->title = $request->title;
+                $page->slug = $request->slug;
+                // $page->image = $request->image;
+                $page->status = $request->status;
+                $page->carousel = $request->carousel;
+                $page->content = $request->content;
                 if ($request->hasFile('image')) {
                     if (Storage::exists('public/page/' . $request->old_image)) {
                         Storage::delete('public/page/' . $request->old_image);
                     }
                     $name = 'image_' . Carbon::now()->timestamp . '.' . $request->file('image')->getClientOriginalExtension();
-                    $request->image = $name;
+                    $page->image = $name;
                     $request->file('image')->storeAs('page', $name, 'public');
                 }
-
-                $page = Page::find($request->id);
-                $page->name = $request->name;
-                $page->title = $request->title;
-                $page->slug = $request->slug;
-                $page->image = $request->image;
-                $page->status = $request->status;
-                $page->carousel = $request->carousel;
-                // $page->slug = SlugService::createSlug(Page::class, 'slug', $request->title);
-                $page->content = $request->content;
                 $page->save();
             }
             return response()->json(['status' => true]);

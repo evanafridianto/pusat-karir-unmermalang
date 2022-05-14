@@ -9,7 +9,7 @@ class City extends Model
 {
     use HasFactory;
     protected $fillable =  [
-        'city_name', 'prov_id'
+        'name', 'province_id'
     ];
 
     public function province()
@@ -20,5 +20,15 @@ class City extends Model
     public function addresses()
     {
         return $this->hasMany(Address::class);
+    }
+
+    public function getNameAttribute($value)
+    {
+        return ucwords(strtolower($value));
+    }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] =  strtolower(ucwords($value));
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Models\Province;
+use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use Yajra\DataTables\DataTables;
 use App\Http\Controllers\Controller;
@@ -67,7 +68,7 @@ class ProvinceController extends Controller
             return response()->json(['error' => $validator->errors(), 'status' => false]);
         } else {
             if (empty($request->id)) { //create
-                $province = new Province();
+                $province = new Province;
                 $province->name =  $request->name;
                 $province->save();
             } else { //update

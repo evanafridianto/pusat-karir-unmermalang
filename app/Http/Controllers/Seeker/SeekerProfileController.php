@@ -28,11 +28,6 @@ use Illuminate\Support\Facades\Validator;
 class SeekerProfileController extends Controller
 {
 
-    public function __construct()
-    {
-        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
-        View::share(compact('pages'));
-    }
     public function index(Request $request, $username)
     {
         $user = User::where('username', $username)->first();

@@ -18,12 +18,6 @@ use \Cviebrock\EloquentSluggable\Services\SlugService;
 
 class EmployerVacancyController extends Controller
 {
-    public function __construct()
-    {
-        $pages = Page::where('carousel', '0')->where('status', 'active')->get();
-        View::share(compact('pages'));
-    }
-
     public function index($id)
     {
         $data = Vacancy::with('employers:id,company_name', 'categories:slug,name')->where('employers.id', $id)

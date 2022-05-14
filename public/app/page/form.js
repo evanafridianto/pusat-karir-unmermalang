@@ -30,6 +30,7 @@ $(function() {
             dataType: "JSON",
             success: function(data) {
                 $('[name="id"]').val(data.id);
+                $('[name="name"]').val(data.name);
                 $('[name="title"]').val(data.title);
                 $('[name="slug"]').val(data.slug);
                 $('[name="content"]').val(data.content);
@@ -40,6 +41,12 @@ $(function() {
                     if (data.file_exists) {
                         $("#img-preview").html(
                             '<img class="img-thumbnail wd-150 ht-80 edit-thumbnail" src="/storage/page/' +
+                            data.image +
+                            '"></img>'
+                        );
+                    } else if (data.image.includes("https://")) {
+                        $("#img-preview").html(
+                            '<img class="img-thumbnail wd-150 ht-80 edit-thumbnail" src="' +
                             data.image +
                             '"></img>'
                         );

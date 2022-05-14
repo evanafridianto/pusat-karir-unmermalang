@@ -68,7 +68,7 @@ class CityController extends Controller
             return response()->json(['error' => $validator->errors(), 'status' => false]);
         } else {
             if (empty($request->id)) { //create
-                $city = new City();
+                $city = new City;
                 $city->name =  $request->name;
                 $city->province_id =  $request->province;
                 $city->save();

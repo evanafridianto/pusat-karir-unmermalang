@@ -10,7 +10,7 @@ class Province extends Model
     use HasFactory;
     protected $table = 'provinces';
     protected $fillable =  [
-        'prov_name', 'locationid', 'status'
+        'name', 'locationid', 'status'
     ];
 
     public function cities()
@@ -21,5 +21,15 @@ class Province extends Model
     public function addresses()
     {
         return $this->hasMany(Address::class);
+    }
+
+    public function getNameAttribute($value)
+    {
+        return ucwords(strtolower($value));
+    }
+
+    public function setNameAttribute($value)
+    {
+        $this->attributes['name'] =  strtolower(ucwords($value));
     }
 }
