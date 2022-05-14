@@ -1,6 +1,8 @@
 $(function() {
+    $("#logo").hide();
     $('[name="image"]').change(function() {
         readURL(this);
+        $("#logo").show();
     });
 
     $("input, select, textarea").bind("keyup change", function() {
