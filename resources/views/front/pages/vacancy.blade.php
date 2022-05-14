@@ -93,11 +93,11 @@
                                                 <a
                                                     href="{{ route('employer.profile', $vacancy->employers->user->username) }}">
                                                     @if (!empty($vacancy->employers->logo) && file_exists('storage/logo/' . $vacancy->employers->logo))
-                                                        <img class="avatar-img"
+                                                        <img class="avatar-img-custom"
                                                             src="{{ asset('storage/logo/' . $vacancy->employers->logo) }}"
                                                             alt="Image Description">
                                                     @else
-                                                        <img class="avatar-img"
+                                                        <img class="avatar-img-custom"
                                                             src="https://ui-avatars.com/api/?name={{ $vacancy->employers->company_name }}"
                                                             alt="Image Description">
                                                     @endif
