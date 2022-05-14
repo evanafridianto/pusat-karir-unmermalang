@@ -14,7 +14,10 @@ use App\Models\Permission;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 use App\Models\EmployerAddress;
+<<<<<<< HEAD
 use App\Models\Page;
+=======
+>>>>>>> 66a39cac52b802076de470761c22daf424d8fef9
 use App\Models\Vacancy;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -841,6 +844,7 @@ class DatabaseSeeder extends Seeder
         $category->save();
 
 
+<<<<<<< HEAD
         $title = 'Selamat datang diwebsite resmi Puskar Unmer Malang';
         $page = new Page;
         $page->title = $title;
@@ -854,6 +858,8 @@ class DatabaseSeeder extends Seeder
         $page->save();
 
 
+=======
+>>>>>>> 66a39cac52b802076de470761c22daf424d8fef9
         $category = Category::factory(20)->create();
         $article =  Article::factory(20)->create();
         $vacancy =  Vacancy::factory(20)->create();
@@ -870,6 +876,9 @@ class DatabaseSeeder extends Seeder
             );
         });
         Address::factory(20)->create();
+<<<<<<< HEAD
         Page::factory(5)->create();
+=======
+>>>>>>> 66a39cac52b802076de470761c22daf424d8fef9
     }
 }

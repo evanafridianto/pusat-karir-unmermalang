@@ -102,8 +102,8 @@
                         <div class="hs-unfold">
                             <button type="button" class="js-hs-unfold-invoker btn btn-sm btn-light dropdown-toggle"
                                 data-hs-unfold-options='{
-                                                                                                                                                                                                                                                                                                                                                           "target": "#dropdownSingleButton"
-                                                                                                                                                                                                                                                                                                                                                         }'>Pilih
+                                                                                                                                                                                                                                                                                                                                                               "target": "#dropdownSingleButton"
+                                                                                                                                                                                                                                                                                                                                                             }'>Pilih
                                 Kategori</button>
 
                             <div id="dropdownSingleButton" class="hs-unfold-content dropdown-menu">
