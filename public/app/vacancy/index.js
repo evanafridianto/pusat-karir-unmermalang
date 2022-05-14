@@ -36,8 +36,8 @@ $(function() {
                 className: "align-middle",
             },
             {
-                data: "categories",
-                name: "categories",
+                data: "category_names",
+                name: "category_names",
                 className: "align-middle",
             },
             {
@@ -62,6 +62,14 @@ $(function() {
     // Select2
     $(".dataTables_length select").select2({
         minimumResultsForSearch: Infinity,
+    });
+
+    $.ajax({
+        type: "GET",
+        url: "",
+        success: function(response) {
+            console.log(response);
+        },
     });
 });
 

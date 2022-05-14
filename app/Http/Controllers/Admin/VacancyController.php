@@ -22,6 +22,7 @@ class VacancyController extends Controller
         $data = [
             'title'  => 'Lowongan Karir',
         ];
+        // Vacancy::latest()->get()->dd();
         if ($request->ajax()) {
             // $data = Vacancy::with('employers:id,company_name', 'categories:slug,name')
             $data = Vacancy::latest();
@@ -31,12 +32,6 @@ class VacancyController extends Controller
                     'company_name',
                     function ($row) {
                         return $row->employers->company_name;
-                    }
-                )
-                ->editColumn(
-                    'categories',
-                    function ($row) {
-                        return $row->categories->pluck('name')->toArray();
                     }
                 )
                 ->editColumn(
@@ -69,7 +64,7 @@ class VacancyController extends Controller
                                 </div>';
                     return $btn;
                 })
-                ->rawColumns(['company_name', 'city', 'categories', 'expiry_date', 'action'])
+                ->rawColumns(['company_name', 'city', 'category_names', 'expiry_date', 'action'])
                 ->make(true);
         }
         return view('admin.pages.vacancy.index', $data);

@@ -18,7 +18,7 @@ class Vacancy extends Model
     ];
 
     protected $appends = [
-        'category_ids',
+        'category_ids', 'category_names',
     ];
 
     public function scopeFilter($query, $filters)
@@ -90,5 +90,10 @@ class Vacancy extends Model
     public function getCategoryIdsAttribute()
     {
         return $this->categories->pluck('id');
+    }
+    public function getCategoryNamesAttribute()
+    {
+        // return '<span class="badge badge-secondary">' . $this->categories->implode('name', ', ') . '</span>';
+        return $this->categories->implode('name', ', ');
     }
 }
