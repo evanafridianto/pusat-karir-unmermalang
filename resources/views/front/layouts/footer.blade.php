@@ -46,7 +46,7 @@
                         </li>
                         <li class="nav-item">
                             @foreach ($pages as $key => $page)
-                                <a class="nav-link" href="{{ route($page->slug) }}">{{ $page->title }}</a>
+                                <a class="nav-link" href="{{ route($page->slug) }}">{{ $page->name }}</a>
                             @endforeach
                         </li>
                     </ul>

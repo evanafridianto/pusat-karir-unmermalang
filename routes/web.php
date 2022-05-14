@@ -68,7 +68,7 @@ foreach ($pages as $key => $page) {
         $data = [
             'title'  =>  $page->title,
             'page' =>  $page,
-            'pages' => Page::where('status', 'active')->get(),
+            'pages' => Page::where('carousel', '0')->where('status', 'active')->get(),
         ];
         return view('front.pages.page', $data);
     })->name($page->slug);

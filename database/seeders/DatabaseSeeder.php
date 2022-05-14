@@ -856,6 +856,19 @@ class DatabaseSeeder extends Seeder
         $page->save();
 
 
+        // https://via.placeholder.com/1920x800.png/0000bb?text=quod
+        $page = new Page;
+        $page->name = 'Membership';
+        $page->title = 'Dapatkan keuntung beragabung menjadi member Puskar Unmer Malang';
+        $page->slug = Str::slug('Membership');
+        $page->content = 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam';
+        $page->image = 'https://via.placeholder.com/1920x800.png/0000bb?text=quod';
+        $page->carousel = '0';
+        $page->status = 'active';
+        $page->created_at = date('Y-m-d H:i:s');
+        $page->updated_at = date('Y-m-d H:i:s');
+        $page->save();
+
         $category = Category::factory(20)->create();
         $article =  Article::factory(20)->create();
         $vacancy =  Vacancy::factory(20)->create();

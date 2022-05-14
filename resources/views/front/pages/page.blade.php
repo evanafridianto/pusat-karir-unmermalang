@@ -16,6 +16,8 @@
                  <div class="w-lg-60 mx-lg-auto">
                      @if (!empty($page->image) && file_exists('storage/page/' . $page->image))
                          <img class="img-fluid rounded" src="{{ asset('storage/page/' . $page->image) }}" alt="Image">
+                     @elseif(Str::contains($page->image, 'https://'))
+                         <img class="img-fluid rounded" src="{{ $page->image }}" alt="Image">
                      @endif
                      <div class="mt-8">
                          <h3 class="h2">{{ $page->title }}</h3>

@@ -115,10 +115,10 @@
                                  <div class="hs-unfold">
                                      <a class="js-hs-unfold-invoker dropdown-nav-link" href="javascript: void(0);"
                                          data-hs-unfold-options='{
-                                                                                                                                                                                                                                                                                                                    "target": "#basicDropdownHover",
-                                                                                                                                                                                                                                                                                                                    "type": "css-animation",
-                                                                                                                                                                                                                                                                                                                    "event": "hover"
-                                                                                                                                                                                                                                                                                                                    }'>{{ Auth::user()->username }}<i
+                                                                                                                                                                                                                                                                                                                            "target": "#basicDropdownHover",
+                                                                                                                                                                                                                                                                                                                            "type": "css-animation",
+                                                                                                                                                                                                                                                                                                                            "event": "hover"
+                                                                                                                                                                                                                                                                                                                            }'>{{ Auth::user()->username }}<i
                                              class="fa-solid fa-circle-user ml-1"></i></a>
                                      <div id="basicDropdownHover" class="hs-unfold-content dropdown-menu">
                                          @if (Auth::user()->hasRole('employer'))
@@ -233,7 +233,7 @@
                                          aria-labelledby="pagesMegaMenu" style="min-width: 230px;">
                                          @foreach ($pages as $key => $page)
                                              <a class="dropdown-item"
-                                                 href="{{ route($page->slug) }}">{{ $page->title }}</a>
+                                                 href="{{ route($page->slug) }}">{{ $page->name }}</a>
                                          @endforeach
                                      </div>
                                  </li>
