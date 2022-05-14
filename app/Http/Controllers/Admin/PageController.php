@@ -104,7 +104,7 @@ class PageController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => 'required',
             'title' => 'required',
-            'slug' => !empty($request->id) ? 'required|string|max:255|alpha_dash|unique:pages,slug,' . $request->id : '',
+            'slug' =>  empty($request->id) ? 'required|max:255|unique:pages,slug' : 'required|max:255|unique:pages,slug,' . $request->id,
             'content' => 'required',
             'image' => 'image|mimes:jpeg,jpg,png,gif|max:5048|nullable',
         ]);

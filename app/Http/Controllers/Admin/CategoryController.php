@@ -72,7 +72,7 @@ class CategoryController extends Controller
         $validator = Validator::make($request->all(), [
             'category_name' => 'required|max:100',
             // 'category_name' => 'required|max:100|unique:categories,name',
-            'category_slug' => !empty($request->id) ? 'required|string|max:255|alpha_dash|unique:categories,slug,' . $request->category_id : '',
+            'category_slug' =>  empty($request->id) ? 'required|max:255|unique:categories,slug' : 'required|max:255|unique:categories,slug,' . $request->id,
             'category_type' => 'required',
         ]);
         if ($validator->fails()) {

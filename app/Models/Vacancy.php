@@ -93,7 +93,6 @@ class Vacancy extends Model
     }
     public function getCategoryNamesAttribute()
     {
-        // return '<span class="badge badge-secondary">' . $this->categories->implode('name', ', ') . '</span>';
         return $this->categories->implode('name', ', ');
     }
 }

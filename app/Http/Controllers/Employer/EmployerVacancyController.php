@@ -63,7 +63,7 @@ class EmployerVacancyController extends Controller
         if ($step == 0) {
             $validator = Validator::make($request->all(), [
                 'job_title' => 'required|max:100',
-                'slug' => !empty($request->id) ? 'required|string|max:255|alpha_dash|unique:vacancies,slug,' . $request->id : '',
+                'slug' =>  empty($request->id) ? 'required|max:255|unique:vacancies,slug' : 'required|max:255|unique:vacancies,slug,' . $request->id,
                 'description' => 'required',
                 'category' => 'required',
                 'job_type' => 'required',
