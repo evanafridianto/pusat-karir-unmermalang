@@ -8,12 +8,12 @@
                     <!-- Sidebar Content -->
                     <div class="js-sticky-block card bg-white"
                         data-hs-sticky-block-options='{
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "parentSelector": "#stickyBlockStartPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "startPoint": "#stickyBlockStartPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "endPoint": "#stickyBlockEndPoint",
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "stickyOffsetTop": 15,
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            "stickyOffsetBottom": 15
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            }'>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "parentSelector": "#stickyBlockStartPoint",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "startPoint": "#stickyBlockStartPoint",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "endPoint": "#stickyBlockEndPoint",
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "stickyOffsetTop": 15,
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    "stickyOffsetBottom": 15
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    }'>
 
                         <div class="card-header text-center py-5 ">
                             <div class="max-w-27rem mx-auto mb-3">
@@ -39,24 +39,28 @@
                         </div>
 
                         <div class="card-body text-center">
-                            <div class="border-bottom pb-2 mb-3">
-                                <div class="row">
-                                    <div class="col-6 col-md-12 col-lg-6 mb-0">
-                                        <!-- Icon Block -->
-                                        <div class="card bg-danger text-white text-center p-3 mb-0">
-                                            {{ $application_count }}
+                            @auth
+                                @if (Auth::user()->hasRole('seeker') && Auth::user()->username == $account->username)
+                                    <div class="border-bottom pb-2 mb-3">
+                                        <div class="row">
+                                            <div class="col-6 col-md-12 col-lg-6 mb-0">
+                                                <!-- Icon Block -->
+                                                <div class="card bg-danger text-white text-center p-3 mb-0">
+                                                    {{ $application_count }}
+                                                </div>
+                                                Lamaran
+                                                <!-- End Icon Block -->
+                                            </div>
+                                            <div class="col-6 col-md-12 col-lg-6 mb-4">
+                                                <div class="card bg-info text-white text-center p-3 mb-0">
+                                                    {{ $application_accept_count }}
+                                                </div>
+                                                Diterima
+                                            </div>
                                         </div>
-                                        Lamaran
-                                        <!-- End Icon Block -->
                                     </div>
-                                    <div class="col-6 col-md-12 col-lg-6 mb-4">
-                                        <div class="card bg-info text-white text-center p-3 mb-0">
-                                            {{ $application_accept_count }}
-                                        </div>
-                                        Diterima
-                                    </div>
-                                </div>
-                            </div>
+                                @endif
+                            @endauth
                             <div class="border-bottom pb-2 mb-3 text-left">
                                 <h1 class="h4 mb-3">Kontak</h1>
                                 <div class="row">
@@ -104,7 +108,7 @@
                                 </div>
                             </div>
                             @auth
-                                @if (Auth::user()->username == $account->username)
+                                @if (Auth::user()->hasRole('seeker') && Auth::user()->username == $account->username)
                                     <div class="mb-0">
                                         <a class="btn btn-xs btn-custom transition-3d-hover"
                                             href="{{ route('seeker.profile.edit', [$account->username, 'profile']) }}">
@@ -128,7 +132,7 @@
                             {{ date('M', strtotime($profile->created_at)) . ' ' . date('Y', strtotime($profile->created_at)) }}</span>
                         <!-- Courses -->
                         <div class="border-top pt-5 mt-5">
-                            <h3 class="mb-4">List Lamaran</h3>
+                            <h3 class="mb-4">List Job Lamaran</h3>
                             <div class="row align-items-center mb-5 sorting">
                                 <div class="col-lg-12 align-self-lg-end text-lg-right">
                                     <form>
@@ -274,7 +278,7 @@
                                                                         </div>
                                                                         <div class="small text-muted">
                                                                             <i class="fa-solid fa-lock mr-1"></i>
-                                                                            {{ date('d', strtotime($applicant->vacancy->expiry_date)) .' ' .date('M', strtotime($applicant->vacancy->expiry_date)) .' ' .date('Y', strtotime($applicant->vacancy->expiry_date)) }}
+                                                                            {{ date('d', strtotime($applicant->vacancy->expiry_date)) . ' ' . date('M', strtotime($applicant->vacancy->expiry_date)) . ' ' . date('Y', strtotime($applicant->vacancy->expiry_date)) }}
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -306,7 +310,7 @@
                                     </div>
                                 @endforeach
                             @else
-                                <p>Data lowongan tidak ditemukan!</p>
+                                <p>Data job lamaran tidak ditemukan!</p>
                             @endif
                         </div>
                         <!-- Pagination -->

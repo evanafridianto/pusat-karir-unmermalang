@@ -15,15 +15,15 @@ class CreateSeekersTable extends Migration
     {
         Schema::create('seekers', function (Blueprint $table) {
             $table->id();
-            $table->string('first_name', 150);
-            $table->string('last_name', 150);
-            $table->string('logo', 50)->nullable();
+            $table->string('first_name');
+            $table->string('last_name');
+            $table->string('logo')->nullable();
             $table->date('date_of_birth');
             $table->enum('gender', ['Male', 'Female']);
             $table->enum('marital_status', ['Single', 'Married']);
             // $table->string('cv', 50)->nullable();
             $table->string('telp');
-            $table->string('website', 100)->nullable();
+            $table->string('website')->nullable();
             $table->mediumText('description')->nullable();
             $table->timestamps();
         });

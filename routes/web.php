@@ -54,12 +54,13 @@ Route::get('province/show', [ProvinceController::class, 'show'])->name('province
 Route::get('city/byprov/{id}', [CityController::class, 'byProv'])->name('city.by.prov');
 
 
-Route::group(['prefix' => 'seeker'], function () {
+Route::group(['prefix' => 'seeker', 'middleware' => ['auth', 'verified']], function () {
     Route::get('seeker/{username}/profile', [SeekerProfileController::class, 'index'])->name('seeker.profile');
 });
-Route::group(['prefix' => 'employer'], function () {
+Route::group(['prefix' => 'employer', 'middleware' => ['auth', 'verified']], function () {
     Route::get('{username}/profile', [EmployerProfileController::class, 'index'])->name('employer.profile');
 });
+
 
 
 // pages front
@@ -177,6 +178,7 @@ Route::group(['prefix' => 'employer', 'middleware' => ['auth', 'verified', 'role
 });
 
 
+
 Route::group(['prefix' => 'seeker', 'middleware' => ['auth', 'verified', 'role:seeker', 'is_seeker']], function () {
 
     Route::get('{username}/application/{slug}', [SeekerApplicantController::class, 'index'])->name('application');
@@ -185,7 +187,9 @@ Route::group(['prefix' => 'seeker', 'middleware' => ['auth', 'verified', 'role:s
     Route::post('application/store', [SeekerApplicantController::class, 'application_store'])->name('application.store');
     Route::delete('application/destory/{id}', [SeekerApplicantController::class, 'application_destroy'])->name('application.destory');
 
+
     Route::get('{username}/{edit}/edit', [SeekerProfileController::class, 'edit'])->name('seeker.profile.edit');
+
     Route::post('profile/store/{step}', [SeekerProfileController::class, 'store'])->name('seeker.profile.store');
     Route::delete('profile/destroy/{name}', [SeekerProfileController::class, 'logo_destroy'])->name('seeker.logo.destroy');
 });

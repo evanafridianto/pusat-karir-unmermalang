@@ -57,21 +57,25 @@ class EmployerProfileController extends Controller
         }
     }
 
-    public function edit(Request $request, $username, $edit)
+    public function edit($username, $edit)
     {
         $user = User::where('username', $username)->first();
-        if ($user && $edit == 'profile' || $edit == 'account' && Auth::user()->username == $username) {
-            $data = [
-                'title'  => $edit == 'profile' ? 'Edit Profil' : 'Edit Akun',
-                'profile' => $user->userable,
-                'account' => $user,
-                'business_fields' => Category::where('type', 'Business Field')->orderBy('name', 'asc')->get(),
-                'provinces' => Province::get(),
-                'edit' =>  $edit
-            ];
-            return view('employer.edit', $data);
+        if ($user && Auth::user()->username == $username) {
+            if ($user && $edit == 'profile' || $edit == 'account') {
+                $data = [
+                    'title'  => $edit == 'profile' ? 'Edit Profil' : 'Edit Akun',
+                    'profile' => $user->userable,
+                    'account' => $user,
+                    'business_fields' => Category::where('type', 'Business Field')->orderBy('name', 'asc')->get(),
+                    'provinces' => Province::get(),
+                    'edit' =>  $edit
+                ];
+                return view('employer.edit', $data);
+            } else {
+                abort(404);
+            }
         } else {
-            abort(404);
+            abort(403, 'Unauthorized action.');
         }
     }
 

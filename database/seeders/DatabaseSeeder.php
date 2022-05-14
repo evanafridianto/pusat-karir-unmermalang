@@ -4,18 +4,22 @@ namespace Database\Seeders;
 
 
 use App\Models\Tag;
+use App\Models\City;
+use App\Models\Page;
 use App\Models\Role;
 use App\Models\User;
+use App\Models\Seeker;
 use App\Models\Address;
 use App\Models\Article;
+use App\Models\Vacancy;
 use App\Models\Category;
 use App\Models\Employer;
+use App\Models\Province;
 use App\Models\Permission;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 use App\Models\EmployerAddress;
-use App\Models\Page;
-use App\Models\Vacancy;
+use App\Models\SeekerEducation;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
@@ -66,6 +70,7 @@ class DatabaseSeeder extends Seeder
         $employer->telp = '0853453444546';
         $employer->tin = '111111111111111';
         $employer->business_scale = 'Big';
+        $employer->description = 'Fermentum mi blandit aptent etiam malesuada amet donec placerat rutrum euismod sagittis adipiscing magnis leo vitae sociosqu si cursus per ullamcorper facilisi ac lacus porttitor condimentum phasellus mauris aliquet diam erat maecenas sed nisl tortor vulputate class dolor ad pretium risus arcu in ut faucibus magna maximus efficitur nisi habitasse hendrerit nascetur vivamus fusce mollis odio litora curabitur sit consequat bibendum lobortis nibh hac laoreet curae non porta parturient commodo facilisis vestibulum ultricies quis';
         $employer->category_id = $category->id;
         $employer->number_of_employee = '>500';
         $employer->status = 'Verified';
@@ -83,11 +88,13 @@ class DatabaseSeeder extends Seeder
         $user->email = 'pusatkarir@unmer.ac.id';
         $user->username = 'pusatkarir-unmermalang';
         $user->password = Hash::make(12345678);
+        $user->email_verified_at = now();
 
         $employer->save();
         $employer->address()->save($address);
         $employer->user()->save($user);
         $user->attachRole(1);
+        $user->attachRole(2);
         // event(new Registered($user));
 
 
@@ -865,6 +872,7 @@ class DatabaseSeeder extends Seeder
         $article =  Article::factory(20)->create();
         $vacancy =  Vacancy::factory(20)->create();
         $tag =  Tag::factory(20)->create();
+        // $address = Address::factory(20)->create();
 
         Article::All()->each(function ($article) use ($tag) {
             $article->tags()->attach(
@@ -875,8 +883,21 @@ class DatabaseSeeder extends Seeder
             $vacancy->categories()->attach(
                 $category->where('type', 'Major')->random(rand(1, 3))->pluck('id')->toArray()
             );
+            $vacancy->address()->save(Address::factory()->make());
         });
-        Address::factory(20)->create();
         Page::factory(5)->create();
+
+        $seeker = Seeker::factory(3)->create();
+
+        Seeker::All()->each(function ($seeker) {
+            $seeker->address()->save(Address::factory()->make());
+            $seeker->seeker_education()->save(SeekerEducation::factory()->make());
+            $seeker->user()->save(
+                $user = User::factory()->make([
+                    'username' => Str::lower($seeker->first_name . $seeker->last_name),
+                ])
+            );
+            $user->attachRole(3);
+        });
     }
 }

@@ -16,13 +16,12 @@ class AddressFactory extends Factory
      */
     public function definition()
     {
+        $prov =  $this->faker->randomElement(Province::pluck('id', 'id')->toArray());
         return [
-            'province_id' => $this->faker->randomElement(Province::pluck('id', 'id')->toArray()),
-            'city_id' => $this->faker->randomElement(City::pluck('id', 'id')->toArray()),
+            'province_id' => $prov,
+            'city_id' => $this->faker->randomElement(City::where('province_id', $prov)->pluck('id', 'id')->toArray()),
             'street' => $this->faker->unique()->sentence,
             'zip_code' => $this->faker->numerify('##########'),
-            'addressable_id' => $this->faker->unique()->randomElement(Vacancy::pluck('id', 'id')->toArray()),
-            'addressable_type' => 'App\Models\Vacancy',
         ];
     }
 }
