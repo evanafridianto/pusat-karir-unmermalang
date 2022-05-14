@@ -14,10 +14,7 @@ use App\Models\Permission;
 use Illuminate\Support\Str;
 use Faker\Generator as Faker;
 use App\Models\EmployerAddress;
-<<<<<<< HEAD
 use App\Models\Page;
-=======
->>>>>>> 66a39cac52b802076de470761c22daf424d8fef9
 use App\Models\Vacancy;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
@@ -844,11 +841,12 @@ class DatabaseSeeder extends Seeder
         $category->save();
 
 
-<<<<<<< HEAD
-        $title = 'Selamat datang diwebsite resmi Puskar Unmer Malang';
+
+        $name = 'About';
         $page = new Page;
-        $page->title = $title;
-        $page->slug = Str::slug($title);
+        $page->name = $name;
+        $page->title = 'Selamat datang diwebsite resmi Puskar Unmer Malang';
+        $page->slug = Str::slug($name);
         $page->content = 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam';
         $page->image = 'slide.jpg';
         $page->carousel = 1;
@@ -858,8 +856,6 @@ class DatabaseSeeder extends Seeder
         $page->save();
 
 
-=======
->>>>>>> 66a39cac52b802076de470761c22daf424d8fef9
         $category = Category::factory(20)->create();
         $article =  Article::factory(20)->create();
         $vacancy =  Vacancy::factory(20)->create();
@@ -876,9 +872,6 @@ class DatabaseSeeder extends Seeder
             );
         });
         Address::factory(20)->create();
-<<<<<<< HEAD
         Page::factory(5)->create();
-=======
->>>>>>> 66a39cac52b802076de470761c22daf424d8fef9
     }
 }

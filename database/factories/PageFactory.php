@@ -14,11 +14,11 @@ class PageFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->unique()->sentence;
-
+        $name = ucfirst($this->faker->unique()->word);
         return [
-            'title' => $title,
-            'slug' => Str::slug($title),
+            'name' => $name,
+            'title' => $this->faker->unique()->sentence,
+            'slug' => Str::slug($name),
             'content' => $this->faker->paragraph,
             'image' => $this->faker->imageUrl(1920, 800),
             'carousel' => 1,

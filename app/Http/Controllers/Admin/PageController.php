@@ -102,6 +102,7 @@ class PageController extends Controller
     public function store(Request $request)
     {
         $validator = Validator::make($request->all(), [
+            'name' => 'required',
             'title' => 'required',
             'slug' => !empty($request->id) ? 'required|string|max:255|alpha_dash|unique:pages,slug,' . $request->id : '',
             'content' => 'required',
@@ -119,6 +120,7 @@ class PageController extends Controller
                 }
 
                 $page = new Page;
+                $page->name = $request->name;
                 $page->title = $request->title;
                 $page->slug = SlugService::createSlug(Page::class, 'slug', $request->title);
                 $page->content = $request->content;
@@ -138,6 +140,7 @@ class PageController extends Controller
                 }
 
                 $page = Page::find($request->id);
+                $page->name = $request->name;
                 $page->title = $request->title;
                 $page->slug = $request->slug;
                 $page->image = $request->image;
@@ -158,7 +161,6 @@ class PageController extends Controller
         if (Storage::exists('public/page/' . $data->image)) {
             Storage::delete('public/page/' . $data->image);
         }
-
         $data->delete();
         return response()->json(['status' => true]);
     }

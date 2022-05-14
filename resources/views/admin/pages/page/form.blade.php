@@ -20,13 +20,21 @@
             <form id="form" enctype="multipart/form-data">
                 @csrf
                 <div class="row">
+                    <div class="col-lg-12">
+                        <div class="form-group">
+                            <label class="form-control-label">Nama Halaman</label>
+                            <input class="form-control" type="text" name="name" placeholder="Masukkan Nama Halaman"
+                                autofocus>
+                            <small class="text-danger"></small>
+                        </div>
+                    </div><!-- col-4 -->
                     <div class="col-lg-{{ Route::is('admin.page.edit') ? 6 : 12 }}">
                         <div class="form-group">
                             <input class="form-control" type="hidden" value="{{ Request::route()->getName() }}"
                                 name="route">
                             <input class="form-control" type="hidden" name="id">
                             <label class="form-control-label">Judul</label>
-                            <input class="form-control" type="text" name="title" placeholder="Masukkan Judul" autofocus>
+                            <input class="form-control" type="text" name="title" placeholder="Masukkan Judul">
                             <small class="text-danger"></small>
                         </div>
                     </div><!-- col-4 -->
