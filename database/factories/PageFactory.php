@@ -14,7 +14,7 @@ class PageFactory extends Factory
      */
     public function definition()
     {
-        $name = ucfirst($this->faker->unique()->word);
+        $name = ucfirst(ucwords($this->faker->unique()->words(2, true)));
         return [
             'name' => $name,
             'title' => $this->faker->unique()->sentence,

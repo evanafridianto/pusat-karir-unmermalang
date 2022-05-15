@@ -16,7 +16,7 @@ class VacancyFactory extends Factory
      */
     public function definition()
     {
-        $title = $this->faker->unique()->sentence;
+        $title = ucwords($this->faker->words(2, true));
 
         return [
             'employer_id' => $this->faker->randomElement(User::pluck('id', 'id')->toArray()),
