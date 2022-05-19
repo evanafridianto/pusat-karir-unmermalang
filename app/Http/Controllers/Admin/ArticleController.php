@@ -94,9 +94,11 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
+        $id = empty($request->id) ? '' : $request->id;
         $validator = Validator::make($request->all(), [
             'title' => 'required|max:100',
-            'slug' =>  empty($request->id) ? 'required|max:255|unique:articles,slug' : 'required|max:255|unique:articles,slug,' . $request->id,
+            'slug' =>  empty($request->id) ? 'alpha_dash|max:255|unique:articles,slug' : 'required|alpha_dash|max:255|unique:articles,slug,' . $request->id,
+            // 'slug' => 'required|alpha_dash|max:255|unique:articles,slug,' . $id,
             'thumbnail' => 'image|mimes:jpeg,jpg,png,gif|max:5048|nullable',
             'content' => 'required',
             'category' => 'required',

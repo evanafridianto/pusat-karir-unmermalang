@@ -101,6 +101,8 @@ function store() {
         processData: false,
         dataType: "JSON",
         success: function(data) {
+            console.log(data);
+
             if (data.status) {
                 swal({
                     title: "Sukses!",

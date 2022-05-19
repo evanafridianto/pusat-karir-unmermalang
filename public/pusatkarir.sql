@@ -31,33 +31,33 @@ CREATE TABLE IF NOT EXISTS `addresses` (
   CONSTRAINT `addresses_province_id_foreign` FOREIGN KEY (`province_id`) REFERENCES `provinces` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pusatkarir.addresses: ~23 rows (approximately)
+-- Dumping data for table pusatkarir.addresses: ~24 rows (approximately)
 /*!40000 ALTER TABLE `addresses` DISABLE KEYS */;
 INSERT INTO `addresses` (`id`, `province_id`, `city_id`, `street`, `zip_code`, `addressable_type`, `addressable_id`, `created_at`, `updated_at`) VALUES
-	(1, 15, 232, 'Jalan Terusan Dieng No. 62-64, Pisang Candi, Sukun', '65146', 'App\\Models\\Employer', 1, '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(2, 19, 270, 'Repellat autem aut eos sed vel blanditiis possimus.', '8202817010', 'App\\Models\\Vacancy', 1, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(3, 12, 174, 'Amet accusamus qui quia omnis sed vitae reiciendis.', '2603938383', 'App\\Models\\Vacancy', 2, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(4, 28, 396, 'Autem eum et quasi explicabo impedit.', '8647053334', 'App\\Models\\Vacancy', 3, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(5, 31, 420, 'Reprehenderit quibusdam nam nulla vel deleniti iure velit.', '0164326752', 'App\\Models\\Vacancy', 4, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(6, 6, 112, 'Consectetur tempora eligendi aut inventore itaque dolores.', '8966785197', 'App\\Models\\Vacancy', 5, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(7, 14, 211, 'Omnis saepe quod ad rerum vero.', '4003043006', 'App\\Models\\Vacancy', 6, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(8, 28, 402, 'Error consequatur ut iure et et autem.', '1484857581', 'App\\Models\\Vacancy', 7, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(9, 25, 351, 'Omnis aut laudantium sint omnis aspernatur et est et.', '1615687238', 'App\\Models\\Vacancy', 8, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(10, 27, 373, 'Ut ut modi ut reiciendis sed et distinctio.', '8369750703', 'App\\Models\\Vacancy', 9, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(11, 13, 194, 'Esse nemo soluta nesciunt sed eos.', '3227179771', 'App\\Models\\Vacancy', 10, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(12, 15, 238, 'Est est voluptatem alias.', '7015780730', 'App\\Models\\Vacancy', 11, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(13, 9, 138, 'Exercitationem ut eos non non.', '5861401715', 'App\\Models\\Vacancy', 12, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(14, 13, 202, 'Sapiente et rerum alias delectus quis eum.', '8529490609', 'App\\Models\\Vacancy', 13, '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(15, 34, 469, 'Incidunt tempore qui id quasi fuga ipsa.', '1455626364', 'App\\Models\\Vacancy', 14, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(16, 16, 246, 'Repudiandae necessitatibus voluptatem ad reiciendis enim nihil nobis.', '3918044042', 'App\\Models\\Vacancy', 15, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(17, 1, 18, 'Aliquam rerum expedita error commodi qui necessitatibus iusto.', '5281905385', 'App\\Models\\Vacancy', 16, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(18, 25, 347, 'Aliquid cumque rerum aliquam unde sint corrupti.', '4527799092', 'App\\Models\\Vacancy', 17, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(19, 1, 10, 'Sequi ducimus et error.', '4709645475', 'App\\Models\\Vacancy', 18, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(20, 24, 339, 'Et explicabo officiis et occaecati ut voluptatem amet unde.', '8613594455', 'App\\Models\\Vacancy', 19, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(21, 13, 180, 'Veritatis voluptas quidem sit et quis amet.', '9376727895', 'App\\Models\\Vacancy', 20, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(22, 28, 404, 'Labore dolore dignissimos incidunt in ex consequatur.', '9759418863', 'App\\Models\\Seeker', 1, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(23, 26, 359, 'Voluptatem velit qui voluptatem tempore reiciendis aut quia.', '2901758771', 'App\\Models\\Seeker', 2, '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(24, 20, 298, 'Quis nisi eum sit et nulla ipsa velit et.', '7600132595', 'App\\Models\\Seeker', 3, '2022-05-14 21:14:23', '2022-05-14 21:14:23');
+	(1, 15, 232, 'Jalan Terusan Dieng No. 62-64, Pisang Candi, Sukun', '65146', 'App\\Models\\Employer', 1, '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(2, 10, 151, 'Sit quis eius dolor consequatur neque itaque quisquam.', '8429297367', 'App\\Models\\Vacancy', 1, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(3, 7, 118, 'Minus quis non eos.', '9473550112', 'App\\Models\\Vacancy', 2, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(4, 26, 360, 'Ut id illum ut.', '0674083467', 'App\\Models\\Vacancy', 3, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(5, 10, 151, 'Id assumenda libero velit voluptates optio.', '0459251408', 'App\\Models\\Vacancy', 4, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(6, 34, 471, 'Non suscipit totam quidem reiciendis laudantium.', '4833308195', 'App\\Models\\Vacancy', 5, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(7, 15, 232, 'Dolore deleniti laborum aut molestiae voluptas autem error.', '0362979120', 'App\\Models\\Vacancy', 6, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(8, 12, 166, 'Nihil quisquam voluptatem quo eum est.', '3617534414', 'App\\Models\\Vacancy', 7, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(9, 3, 72, 'Pariatur ut natus modi.', '9849895537', 'App\\Models\\Vacancy', 8, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(10, 5, 92, 'Dolore debitis natus voluptatem ut.', '9087192793', 'App\\Models\\Vacancy', 9, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(11, 14, 211, 'Neque rerum eos aut quis voluptate.', '9435628666', 'App\\Models\\Vacancy', 10, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(12, 6, 107, 'At quia sit reprehenderit quis et voluptatum laboriosam.', '5979548873', 'App\\Models\\Vacancy', 11, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(13, 11, 156, 'Quos qui eum quis vel.', '8958500394', 'App\\Models\\Vacancy', 12, '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(14, 27, 370, 'Praesentium corporis est odit qui.', '9692421665', 'App\\Models\\Vacancy', 13, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(15, 17, 260, 'Quae blanditiis ad quas amet ratione.', '6868759714', 'App\\Models\\Vacancy', 14, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(16, 5, 96, 'Sint est illo ex a ea suscipit sapiente.', '1340992051', 'App\\Models\\Vacancy', 15, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(17, 3, 59, 'Quasi hic aut eaque et.', '8449581199', 'App\\Models\\Vacancy', 16, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(18, 2, 25, 'Omnis aliquam molestias sunt ipsam.', '5047839776', 'App\\Models\\Vacancy', 17, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(19, 26, 369, 'Ut ab sit quis blanditiis odio qui est nihil.', '7876804993', 'App\\Models\\Vacancy', 18, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(20, 25, 347, 'Eos vel tempore maiores.', '0404640137', 'App\\Models\\Vacancy', 19, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(21, 21, 307, 'Illum tempora et omnis et veniam et minus.', '9501953278', 'App\\Models\\Vacancy', 20, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(22, 9, 139, 'Laborum labore dicta non autem.', '6779312867', 'App\\Models\\Seeker', 1, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(23, 26, 364, 'Quos repellat earum ratione quidem cum nihil enim.', '0072004231', 'App\\Models\\Seeker', 2, '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(24, 3, 64, 'Enim neque et aut.', '7320715112', 'App\\Models\\Seeker', 3, '2022-05-15 08:32:13', '2022-05-15 08:32:13');
 /*!40000 ALTER TABLE `addresses` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.applicants
@@ -103,26 +103,26 @@ CREATE TABLE IF NOT EXISTS `articles` (
 -- Dumping data for table pusatkarir.articles: ~20 rows (approximately)
 /*!40000 ALTER TABLE `articles` DISABLE KEYS */;
 INSERT INTO `articles` (`id`, `user_id`, `title`, `slug`, `thumbnail`, `content`, `category_id`, `tag`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'Voluptatum qui consequatur qui inventore unde dolorum.', 'voluptatum-qui-consequatur-qui-inventore-unde-dolorum', 'https://via.placeholder.com/640x480.png/006677?text=quia', 'Dolor sit quae modi aperiam illo delectus odio voluptatem. Corporis voluptas blanditiis odio atque et et.', 105, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(2, 1, 'Quis omnis rerum aut sit sit.', 'quis-omnis-rerum-aut-sit-sit', 'https://via.placeholder.com/640x480.png/00bb44?text=laboriosam', 'Porro omnis quos ut non consequatur quis enim quam. In id iusto qui fuga. Consequatur sed possimus voluptatem dolor.', 104, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(3, 1, 'Inventore quas qui accusantium quo est exercitationem sed.', 'inventore-quas-qui-accusantium-quo-est-exercitationem-sed', 'https://via.placeholder.com/640x480.png/00ee88?text=eum', 'Ut nulla doloremque commodi reiciendis. Suscipit autem reiciendis necessitatibus quia quisquam.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(4, 1, 'Autem et id earum culpa et rem.', 'autem-et-id-earum-culpa-et-rem', 'https://via.placeholder.com/640x480.png/001122?text=aut', 'Aperiam adipisci repellat maiores blanditiis. Recusandae aut impedit officiis iste quisquam. Sed quisquam optio mollitia est qui porro. Nihil odit consequatur illo minima eligendi aliquid ea.', 94, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(5, 1, 'In quibusdam sed aut odio adipisci inventore.', 'in-quibusdam-sed-aut-odio-adipisci-inventore', 'https://via.placeholder.com/640x480.png/00cc88?text=qui', 'Quas laboriosam ad aut et. Est aliquam a et eos rem beatae. Quod molestiae modi consequatur tempore deleniti assumenda non. Vero modi libero fuga aperiam numquam doloribus.', 105, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(6, 1, 'Non aut velit qui est placeat eos.', 'non-aut-velit-qui-est-placeat-eos', 'https://via.placeholder.com/640x480.png/0055dd?text=fuga', 'Illo ratione unde harum sunt quia modi. Natus molestiae dolores iure ullam doloremque. Alias sapiente molestiae fuga aut. Qui id in et quo et harum.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(7, 1, 'Natus eius corrupti et in dolores et.', 'natus-eius-corrupti-et-in-dolores-et', 'https://via.placeholder.com/640x480.png/003344?text=dolorum', 'Qui qui et voluptate excepturi in. Reprehenderit cumque eius debitis quibusdam fugit. Non placeat itaque quia ut mollitia et saepe fuga.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(8, 1, 'Pariatur tenetur et illo vitae.', 'pariatur-tenetur-et-illo-vitae', 'https://via.placeholder.com/640x480.png/00dd33?text=repellendus', 'Numquam voluptas repellendus facere quo ut sed. Vitae natus voluptatum consequatur delectus voluptatem maxime ratione. Consequuntur ea ea aut possimus.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(9, 1, 'Ad aperiam ut et.', 'ad-aperiam-ut-et', 'https://via.placeholder.com/640x480.png/004411?text=ratione', 'Et ipsa vel culpa expedita repellendus. Sint velit est quis consequatur. Molestias voluptate vitae quaerat saepe doloremque. Temporibus doloribus et dolorum.', 105, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(10, 1, 'Aut animi maxime vitae assumenda aut est ea eius.', 'aut-animi-maxime-vitae-assumenda-aut-est-ea-eius', 'https://via.placeholder.com/640x480.png/00ff99?text=suscipit', 'Et cupiditate sequi eos sit neque. Qui perferendis consequatur aut. Asperiores voluptatem ea earum tenetur velit. Assumenda illo est minima qui.', 97, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(11, 1, 'Sint aut atque vitae ea praesentium et molestiae doloremque.', 'sint-aut-atque-vitae-ea-praesentium-et-molestiae-doloremque', 'https://via.placeholder.com/640x480.png/0077aa?text=sint', 'Totam nihil recusandae accusantium placeat aut impedit omnis. Et architecto laboriosam consectetur sed ut ad veniam et. Deserunt id veritatis quidem amet architecto eum. Voluptatibus et expedita quas ut voluptatem. Corrupti itaque qui ipsum qui voluptas rem.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(12, 1, 'Dignissimos nisi aut maiores inventore quidem voluptas.', 'dignissimos-nisi-aut-maiores-inventore-quidem-voluptas', 'https://via.placeholder.com/640x480.png/00ccee?text=accusamus', 'Rerum odit recusandae voluptas recusandae sit. Delectus ut consequuntur voluptatem. Illo iste quis aut placeat quasi. Numquam nam sed laudantium quas et animi.', 102, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(13, 1, 'Rerum alias quisquam architecto exercitationem autem dolorem.', 'rerum-alias-quisquam-architecto-exercitationem-autem-dolorem', 'https://via.placeholder.com/640x480.png/006666?text=repellat', 'Dicta voluptatem tempore tempore nam aut ipsam facilis quasi. Ut nesciunt nihil sint libero expedita voluptas neque. Voluptas et accusamus eaque repellat.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(14, 1, 'Similique eum earum aliquam non omnis quaerat numquam quia.', 'similique-eum-earum-aliquam-non-omnis-quaerat-numquam-quia', 'https://via.placeholder.com/640x480.png/004433?text=voluptatibus', 'Porro numquam eligendi aliquam officia qui rerum. Voluptatem nemo et maiores tempore odio quia. Enim corrupti provident sed eius amet dolorem architecto.', 102, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(15, 1, 'Illum id ducimus et ex non quo fuga.', 'illum-id-ducimus-et-ex-non-quo-fuga', 'https://via.placeholder.com/640x480.png/00bbbb?text=odio', 'Dolorum nulla et explicabo voluptatibus. Sunt aut itaque earum voluptates aspernatur nisi. Voluptatum dicta repellendus magnam delectus.', 95, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(16, 1, 'Necessitatibus beatae odit ex omnis.', 'necessitatibus-beatae-odit-ex-omnis', 'https://via.placeholder.com/640x480.png/0088dd?text=amet', 'Deleniti eum id maiores mollitia doloremque et. Quidem architecto est animi. Et ab quam ut facilis. Odit perspiciatis sit rerum quam minima.', 104, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(17, 1, 'Vel nam magnam itaque dignissimos aspernatur iure.', 'vel-nam-magnam-itaque-dignissimos-aspernatur-iure', 'https://via.placeholder.com/640x480.png/00ff22?text=voluptas', 'Id explicabo sunt dolor architecto rem tenetur hic. Dolore eveniet numquam fugiat itaque ut quis sed aperiam. Sed enim consequatur iusto ad atque necessitatibus. Laudantium possimus voluptates exercitationem et earum atque velit.', 105, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(18, 1, 'Ratione reiciendis natus aperiam blanditiis sit.', 'ratione-reiciendis-natus-aperiam-blanditiis-sit', 'https://via.placeholder.com/640x480.png/00ccff?text=ex', 'Placeat aut dolore consequuntur cupiditate ducimus id. Beatae iusto laudantium qui dolorum non explicabo et et. Quidem sit quia voluptas quos.', 94, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(19, 1, 'Sit exercitationem voluptatem iste.', 'sit-exercitationem-voluptatem-iste', 'https://via.placeholder.com/640x480.png/000000?text=est', 'Cupiditate fugiat quis sed quisquam eveniet expedita nulla. Et quasi unde veritatis error sit harum.', 102, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(20, 1, 'Et ut aut esse commodi error sed voluptate ratione.', 'et-ut-aut-esse-commodi-error-sed-voluptate-ratione', 'https://via.placeholder.com/640x480.png/00bbbb?text=illo', 'Impedit esse porro praesentium hic consequuntur. Maiores voluptatum tempora id autem sit. Rerum rem at enim nobis consequatur mollitia.', 111, NULL, '2022-05-14 21:14:21', '2022-05-14 21:14:21');
+	(1, 1, 'Harum est temporibus voluptate deleniti at.', 'harum-est-temporibus-voluptate-deleniti-at', 'https://via.placeholder.com/640x480.png/0044bb?text=voluptate', 'Voluptate iure provident dolor sapiente facere. Quaerat est libero et. Quam facere exercitationem nulla quidem molestiae sunt illo. Dolor rerum cupiditate sit saepe deserunt et consectetur.', 99, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(2, 1, 'Ab necessitatibus error temporibus alias dolores.', 'ab-necessitatibus-error-temporibus-alias-dolores', 'https://via.placeholder.com/640x480.png/009933?text=aut', 'Officiis ratione quia dolores ex commodi. Consequatur cum velit qui debitis illum. Alias voluptas voluptates eligendi quia. Iusto quis expedita tenetur.', 108, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(3, 1, 'Corporis eos quisquam nobis unde distinctio et aut rerum.', 'corporis-eos-quisquam-nobis-unde-distinctio-et-aut-rerum', 'https://via.placeholder.com/640x480.png/0066bb?text=voluptas', 'Aut ipsa magnam reiciendis. Expedita doloribus hic eveniet ut. Autem ratione quod ea.', 109, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(4, 1, 'Facilis saepe est temporibus vitae nobis qui nam.', 'facilis-saepe-est-temporibus-vitae-nobis-qui-nam', 'https://via.placeholder.com/640x480.png/00bbbb?text=voluptatem', 'Fugiat quia vel harum consequatur expedita sequi voluptatem. Cumque atque quo nihil dolore numquam.', 107, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(5, 1, 'Voluptatem animi et perspiciatis qui iste.', 'voluptatem-animi-et-perspiciatis-qui-iste', 'https://via.placeholder.com/640x480.png/00ff00?text=eius', 'Distinctio necessitatibus doloribus vero ex. Earum nemo quaerat labore velit velit molestiae tenetur. Accusamus at excepturi quo facilis ut ea maiores. Est animi veniam et nobis.', 95, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(6, 1, 'At velit vel quo magni deserunt atque repellendus.', 'at-velit-vel-quo-magni-deserunt-atque-repellendus', 'https://via.placeholder.com/640x480.png/002266?text=quisquam', 'Harum animi odio quam dicta. Unde vero veniam eum occaecati quia laudantium.', 108, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(7, 1, 'Nam ullam quia eos dignissimos architecto nulla sapiente.', 'nam-ullam-quia-eos-dignissimos-architecto-nulla-sapiente', 'https://via.placeholder.com/640x480.png/007722?text=error', 'Nostrum et qui reiciendis labore. Dolorem aspernatur ipsam qui non et et quia sit. Ea temporibus perferendis nostrum corporis ut quas error. Et quos tempore sit sint fugit illum totam.', 108, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(8, 1, 'Vitae ut odit nam adipisci quia totam quod.', 'vitae-ut-odit-nam-adipisci-quia-totam-quod', 'https://via.placeholder.com/640x480.png/00ccff?text=et', 'Voluptas repellat culpa animi ut nisi quaerat. Temporibus explicabo quisquam incidunt porro dolor. Molestias molestiae debitis rerum. Dolorem et et corrupti.', 109, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(9, 1, 'Et nemo inventore ea aut unde qui tenetur.', 'et-nemo-inventore-ea-aut-unde-qui-tenetur', 'https://via.placeholder.com/640x480.png/003322?text=sit', 'Esse culpa eum aut. Hic et aut et veniam. Sit officiis nostrum explicabo dicta tempora.', 102, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(10, 1, 'Et non praesentium illo a similique distinctio.', 'et-non-praesentium-illo-a-similique-distinctio', 'https://via.placeholder.com/640x480.png/0000ff?text=dignissimos', 'Aperiam est at labore aut perferendis repellat. Sunt quaerat aut sint optio quidem nam.', 108, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(11, 1, 'Animi ut architecto expedita eos aliquid.', 'animi-ut-architecto-expedita-eos-aliquid', 'https://via.placeholder.com/640x480.png/0077cc?text=doloribus', 'Consequatur dolorem velit omnis ducimus repellendus consequatur asperiores. Ad et cum quibusdam fugiat sunt voluptatibus quaerat. Quae nisi enim ipsa tenetur accusamus. Assumenda et dignissimos qui consequatur consequatur ipsum cum.', 104, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(12, 1, 'Id omnis cupiditate labore aut perferendis.', 'id-omnis-cupiditate-labore-aut-perferendis', 'https://via.placeholder.com/640x480.png/0022cc?text=iste', 'Dignissimos sit distinctio dolores qui et excepturi occaecati quo. In ut possimus voluptatem dignissimos temporibus quia illum quia. Omnis maxime quae natus corporis et voluptatem. Id quia rerum culpa aut ducimus sint.', 106, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(13, 1, 'Qui modi saepe pariatur distinctio fugiat ut.', 'qui-modi-saepe-pariatur-distinctio-fugiat-ut', 'https://via.placeholder.com/640x480.png/007788?text=odit', 'Voluptas consequuntur deleniti dolores quam. Ipsum expedita dolore dolores. Vitae sed voluptate sit enim unde eos eum. Provident aut dolor maiores facilis a sed et.', 108, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(14, 1, 'Culpa aut temporibus totam officia incidunt in.', 'culpa-aut-temporibus-totam-officia-incidunt-in', 'https://via.placeholder.com/640x480.png/007777?text=autem', 'Sed labore aut cumque atque perspiciatis. Maiores sed fugiat ut voluptate delectus sit. Modi in quasi nostrum. Et quo occaecati vero.', 99, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(15, 1, 'Ea quia dolor ut accusantium porro.', 'ea-quia-dolor-ut-accusantium-porro', 'https://via.placeholder.com/640x480.png/0066bb?text=ullam', 'Eum maxime in a laudantium odio. Soluta nobis sit qui non.', 102, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(16, 1, 'Eaque ut consequatur sit molestias repudiandae.', 'eaque-ut-consequatur-sit-molestias-repudiandae', 'https://via.placeholder.com/640x480.png/00aabb?text=a', 'Et eum sed non nesciunt vitae quis aut aliquid. Qui aliquid nihil aut voluptas excepturi et laborum. Quis et quidem distinctio.', 101, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(17, 1, 'Voluptatem est rerum aperiam quos saepe modi.', 'voluptatem-est-rerum-aperiam-quos-saepe-modi', 'https://via.placeholder.com/640x480.png/00dd22?text=quasi', 'Voluptatem ducimus expedita porro voluptas blanditiis officiis. Aspernatur reprehenderit exercitationem ab officia suscipit. Velit eos impedit ipsum doloremque voluptatem velit. Temporibus a sed doloribus consequatur assumenda.', 109, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(18, 1, 'Temporibus recusandae eligendi id ab.', 'temporibus-recusandae-eligendi-id-ab', 'https://via.placeholder.com/640x480.png/003377?text=minus', 'Vel tempore debitis a non consequuntur consequatur. In quisquam itaque laboriosam sed qui a iusto. Reiciendis blanditiis aut corrupti at modi nostrum. Odio laboriosam est odio mollitia.', 101, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(19, 1, 'Nulla voluptatibus reiciendis dolorum ad ipsam accusantium qui.', 'nulla-voluptatibus-reiciendis-dolorum-ad-ipsam-accusantium-qui', 'https://via.placeholder.com/640x480.png/0055cc?text=hic', 'Molestiae et veniam laborum eum a. Omnis soluta aperiam non aperiam vero aut. Sed quasi doloremque eos et culpa quidem dolorem.', 108, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(20, 1, 'Neque nobis rerum aut enim aspernatur est repudiandae voluptatem.', 'neque-nobis-rerum-aut-enim-aspernatur-est-repudiandae-voluptatem', 'https://via.placeholder.com/640x480.png/006633?text=omnis', 'Cum officiis modi molestiae nemo explicabo. Consectetur cum quasi quae consequatur voluptas. Doloribus corporis ipsum voluptatem provident minus enim voluptas.', 102, NULL, '2022-05-15 08:32:11', '2022-05-15 08:32:11');
 /*!40000 ALTER TABLE `articles` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.categories
@@ -139,117 +139,117 @@ CREATE TABLE IF NOT EXISTS `categories` (
 -- Dumping data for table pusatkarir.categories: ~111 rows (approximately)
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
 INSERT INTO `categories` (`id`, `name`, `slug`, `type`, `created_at`, `updated_at`) VALUES
-	(1, 'Pendidikan', 'pendidikan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(2, 'Akuntan / Auditor', 'akuntan-auditor', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(3, 'Asuransi', 'asuransi', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(4, 'Bioteknologi & Biologi', 'bioteknologi-biologi', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(5, 'Biro Perjalanan', 'biro-perjalanan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(6, 'Bubur Kertas / Kertas', 'bubur-kertas-kertas', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(7, 'Desain Interior', 'desain-interior', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(8, 'E-Commerce', 'e-commerce', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(9, 'Ekspedisi / Agen Kargo', 'ekspedisi-agen-kargo', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(10, 'Elektronika / Semikonduktor', 'elektronika-semikonduktor', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(11, 'Energi', 'energi', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(12, 'Event Organizer', 'event-organizer', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(13, 'Farmasi', 'farmasi', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(14, 'Furnitur', 'furnitur', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(15, 'Garmen / Tekstil', 'garmen-tekstil', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(16, 'Hiburan', 'hiburan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(17, 'Hotel', 'hotel', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(18, 'Hukum', 'hukum', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(19, 'Internet', 'internet', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(20, 'Jasa Ground handling', 'jasa-ground-handling', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(21, 'Jasa Pemindahan', 'jasa-pemindahan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(22, 'Jasa Pengamanan', 'jasa-pengamanan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(23, 'Jasa Pengendalian Hama', 'jasa-pengendalian-hama', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(24, 'Kecantikan / Fitness', 'kecantikan-fitness', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(25, 'Kehutanan / Perkayuan', 'kehutanan-perkayuan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(26, 'Kelautan / Aquakultur', 'kelautan-aquakultur', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(27, 'Keramik & Alat Kebersihan', 'keramik-alat-kebersihan', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(28, 'Keuangan / Bank', 'keuangan-bank', 'Business Field', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(29, 'Kimia', 'kimia', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(30, 'Komputer / IT-Hardware', 'komputer-it-hardware', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(31, 'Komputer / TI', 'komputer-ti', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(32, 'Konglomerasi', 'konglomerasi', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(33, 'Konstruksi', 'konstruksi', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(34, 'Konsultan', 'konsultan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(35, 'Konsultan (Bisnis & Manajemen)', 'konsultan-bisnis-manajemen', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(36, 'Konsultan (IT; IPTEK)', 'konsultan-it-iptek', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(37, 'Kosmetik', 'kosmetik', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(38, 'Kulit', 'kulit', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(39, 'Kurir', 'kurir', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(40, 'Logam', 'logam', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(41, 'Logistik / Transportasi', 'logistik-transportasi', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(42, 'Mainan', 'mainan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(43, 'Makanan dan Minuman', 'makanan-dan-minuman', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(44, 'Manajemen Fasilitas', 'manajemen-fasilitas', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(45, 'Manajemen Lingkungan / Limbah', 'manajemen-lingkungan-limbah', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(46, 'Manufactur & Retail Building Material', 'manufactur-retail-building-material', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(47, 'Manufaktur', 'manufaktur', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(48, 'Manufaktur Elektronik', 'manufaktur-elektronik', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(49, 'Media', 'media', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(50, 'Mekanik / Listrik', 'mekanik-listrik', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(51, 'Mesin / Peralatan', 'mesin-peralatan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(52, 'Minyak dan Gas', 'minyak-dan-gas', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(53, 'Otomotif', 'otomotif', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(54, 'Pemerintahan', 'pemerintahan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(55, 'Pemrosesan Makanan', 'pemrosesan-makanan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(56, 'Penerbangan', 'penerbangan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(57, 'Pengapalan', 'pengapalan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(58, 'Pengolahan Sumber Daya Alam', 'pengolahan-sumber-daya-alam', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(59, 'Perawatan Kesehatan', 'perawatan-kesehatan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(60, 'Percetakan dan Kemasan', 'percetakan-dan-kemasan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(61, 'Perdagangan Komoditas', 'perdagangan-komoditas', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(62, 'Perdagangan Umum', 'perdagangan-umum', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(63, 'Pergudangan', 'pergudangan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(64, 'Perikanan', 'perikanan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(65, 'Periklanan / Penerbitan', 'periklanan-penerbitan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(66, 'Permata & Perhiasan', 'permata-perhiasan', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(67, 'Permen / Biskuit', 'permen-biskuit', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(68, 'Pertambangan / Mineral', 'pertambangan-mineral', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(69, 'Polimer / Plastik / Karet', 'polimer-plastik-karet', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(70, 'Produk Konsumen', 'produk-konsumen', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(71, 'Produk Konsumen Elektronik', 'produk-konsumen-elektronik', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(72, 'Properti', 'properti', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(73, 'Pupuk & Pestisida', 'pupuk-pestisida', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(74, 'Rancang Bangun Pesawat', 'rancang-bangun-pesawat', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(75, 'Rekayasa & Konstruksi', 'rekayasa-konstruksi', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(76, 'Rekrutmen / KPO', 'rekrutmen-kpo', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(77, 'Restoran', 'restoran', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(78, 'Ritel', 'ritel', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(79, 'Sektor Nirlaba', 'sektor-nirlaba', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(80, 'Semen', 'semen', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(81, 'Seni / Desain / Fashion', 'seni-desain-fashion', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(82, 'Servis', 'servis', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(83, 'Sistem Pemadam Kebakaran', 'sistem-pemadam-kebakaran', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(84, 'Startup dan Fintech', 'startup-dan-fintech', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(85, 'Sumber Daya Alam Lainnya', 'sumber-daya-alam-lainnya', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(86, 'Teknologi Finansial', 'teknologi-finansial', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(87, 'Telekomunikasi', 'telekomunikasi', 'Business Field', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(88, 'Akuntasi', 'akuntasi', 'Major', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(89, 'Sistem Informasi', 'sistem-informasi', 'Major', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(90, 'Hukum', 'hukum', 'Major', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(91, 'Pariwisata', 'pariwisata', 'Major', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(92, 'Aspernatur', 'aspernatur', 'Major', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(93, 'Voluptas', 'voluptas', 'Major', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(94, 'Ducimus', 'ducimus', 'News', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(95, 'Id', 'id', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(96, 'Assumenda', 'assumenda', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(97, 'Culpa', 'culpa', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(98, 'Libero', 'libero', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(99, 'Sint', 'sint', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(100, 'Aut', 'aut', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(101, 'Consectetur', 'consectetur', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(102, 'Porro', 'porro', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(103, 'Qui', 'qui', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(104, 'Numquam', 'numquam', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(105, 'Vero', 'vero', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(106, 'Tempora', 'tempora', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(107, 'Nihil', 'nihil', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(108, 'Excepturi', 'excepturi', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(109, 'Deleniti', 'deleniti', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(110, 'Quaerat', 'quaerat', 'Major', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(111, 'Perferendis', 'perferendis', 'News', '2022-05-14 21:14:21', '2022-05-14 21:14:21');
+	(1, 'Pendidikan', 'pendidikan', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(2, 'Akuntan / Auditor', 'akuntan-auditor', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(3, 'Asuransi', 'asuransi', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(4, 'Bioteknologi & Biologi', 'bioteknologi-biologi', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(5, 'Biro Perjalanan', 'biro-perjalanan', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(6, 'Bubur Kertas / Kertas', 'bubur-kertas-kertas', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(7, 'Desain Interior', 'desain-interior', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(8, 'E-Commerce', 'e-commerce', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(9, 'Ekspedisi / Agen Kargo', 'ekspedisi-agen-kargo', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(10, 'Elektronika / Semikonduktor', 'elektronika-semikonduktor', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(11, 'Energi', 'energi', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(12, 'Event Organizer', 'event-organizer', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(13, 'Farmasi', 'farmasi', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(14, 'Furnitur', 'furnitur', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(15, 'Garmen / Tekstil', 'garmen-tekstil', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(16, 'Hiburan', 'hiburan', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(17, 'Hotel', 'hotel', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(18, 'Hukum', 'hukum', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(19, 'Internet', 'internet', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(20, 'Jasa Ground handling', 'jasa-ground-handling', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(21, 'Jasa Pemindahan', 'jasa-pemindahan', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(22, 'Jasa Pengamanan', 'jasa-pengamanan', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(23, 'Jasa Pengendalian Hama', 'jasa-pengendalian-hama', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(24, 'Kecantikan / Fitness', 'kecantikan-fitness', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(25, 'Kehutanan / Perkayuan', 'kehutanan-perkayuan', 'Business Field', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(26, 'Kelautan / Aquakultur', 'kelautan-aquakultur', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(27, 'Keramik & Alat Kebersihan', 'keramik-alat-kebersihan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(28, 'Keuangan / Bank', 'keuangan-bank', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(29, 'Kimia', 'kimia', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(30, 'Komputer / IT-Hardware', 'komputer-it-hardware', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(31, 'Komputer / TI', 'komputer-ti', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(32, 'Konglomerasi', 'konglomerasi', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(33, 'Konstruksi', 'konstruksi', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(34, 'Konsultan', 'konsultan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(35, 'Konsultan (Bisnis & Manajemen)', 'konsultan-bisnis-manajemen', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(36, 'Konsultan (IT; IPTEK)', 'konsultan-it-iptek', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(37, 'Kosmetik', 'kosmetik', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(38, 'Kulit', 'kulit', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(39, 'Kurir', 'kurir', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(40, 'Logam', 'logam', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(41, 'Logistik / Transportasi', 'logistik-transportasi', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(42, 'Mainan', 'mainan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(43, 'Makanan dan Minuman', 'makanan-dan-minuman', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(44, 'Manajemen Fasilitas', 'manajemen-fasilitas', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(45, 'Manajemen Lingkungan / Limbah', 'manajemen-lingkungan-limbah', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(46, 'Manufactur & Retail Building Material', 'manufactur-retail-building-material', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(47, 'Manufaktur', 'manufaktur', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(48, 'Manufaktur Elektronik', 'manufaktur-elektronik', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(49, 'Media', 'media', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(50, 'Mekanik / Listrik', 'mekanik-listrik', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(51, 'Mesin / Peralatan', 'mesin-peralatan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(52, 'Minyak dan Gas', 'minyak-dan-gas', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(53, 'Otomotif', 'otomotif', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(54, 'Pemerintahan', 'pemerintahan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(55, 'Pemrosesan Makanan', 'pemrosesan-makanan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(56, 'Penerbangan', 'penerbangan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(57, 'Pengapalan', 'pengapalan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(58, 'Pengolahan Sumber Daya Alam', 'pengolahan-sumber-daya-alam', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(59, 'Perawatan Kesehatan', 'perawatan-kesehatan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(60, 'Percetakan dan Kemasan', 'percetakan-dan-kemasan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(61, 'Perdagangan Komoditas', 'perdagangan-komoditas', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(62, 'Perdagangan Umum', 'perdagangan-umum', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(63, 'Pergudangan', 'pergudangan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(64, 'Perikanan', 'perikanan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(65, 'Periklanan / Penerbitan', 'periklanan-penerbitan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(66, 'Permata & Perhiasan', 'permata-perhiasan', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(67, 'Permen / Biskuit', 'permen-biskuit', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(68, 'Pertambangan / Mineral', 'pertambangan-mineral', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(69, 'Polimer / Plastik / Karet', 'polimer-plastik-karet', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(70, 'Produk Konsumen', 'produk-konsumen', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(71, 'Produk Konsumen Elektronik', 'produk-konsumen-elektronik', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(72, 'Properti', 'properti', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(73, 'Pupuk & Pestisida', 'pupuk-pestisida', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(74, 'Rancang Bangun Pesawat', 'rancang-bangun-pesawat', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(75, 'Rekayasa & Konstruksi', 'rekayasa-konstruksi', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(76, 'Rekrutmen / KPO', 'rekrutmen-kpo', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(77, 'Restoran', 'restoran', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(78, 'Ritel', 'ritel', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(79, 'Sektor Nirlaba', 'sektor-nirlaba', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(80, 'Semen', 'semen', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(81, 'Seni / Desain / Fashion', 'seni-desain-fashion', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(82, 'Servis', 'servis', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(83, 'Sistem Pemadam Kebakaran', 'sistem-pemadam-kebakaran', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(84, 'Startup dan Fintech', 'startup-dan-fintech', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(85, 'Sumber Daya Alam Lainnya', 'sumber-daya-alam-lainnya', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(86, 'Teknologi Finansial', 'teknologi-finansial', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(87, 'Telekomunikasi', 'telekomunikasi', 'Business Field', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(88, 'Akuntasi', 'akuntasi', 'Major', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(89, 'Sistem Informasi', 'sistem-informasi', 'Major', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(90, 'Hukum', 'hukum', 'Major', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(91, 'Pariwisata', 'pariwisata', 'Major', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(92, 'Eum', 'eum', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(93, 'Laboriosam', 'laboriosam', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(94, 'Voluptatibus', 'voluptatibus', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(95, 'Sapiente', 'sapiente', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(96, 'Recusandae', 'recusandae', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(97, 'Expedita', 'expedita', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(98, 'Odit', 'odit', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(99, 'Eveniet', 'eveniet', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(100, 'Nam', 'nam', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(101, 'Deleniti', 'deleniti', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(102, 'Sed', 'sed', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(103, 'Architecto', 'architecto', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(104, 'Dolorum', 'dolorum', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(105, 'Beatae', 'beatae', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(106, 'Qui', 'qui', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(107, 'Et', 'et', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(108, 'Cupiditate', 'cupiditate', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(109, 'Inventore', 'inventore', 'News', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(110, 'Veritatis', 'veritatis', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(111, 'Omnis', 'omnis', 'Major', '2022-05-15 08:32:11', '2022-05-15 08:32:11');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.category_vacancy
@@ -264,45 +264,43 @@ CREATE TABLE IF NOT EXISTS `category_vacancy` (
   CONSTRAINT `category_vacancy_vacancy_id_foreign` FOREIGN KEY (`vacancy_id`) REFERENCES `vacancies` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pusatkarir.category_vacancy: ~36 rows (approximately)
+-- Dumping data for table pusatkarir.category_vacancy: ~34 rows (approximately)
 /*!40000 ALTER TABLE `category_vacancy` DISABLE KEYS */;
 INSERT INTO `category_vacancy` (`vacancy_id`, `category_id`, `created_at`, `updated_at`) VALUES
-	(1, 98, NULL, NULL),
-	(1, 107, NULL, NULL),
-	(1, 110, NULL, NULL),
-	(2, 93, NULL, NULL),
+	(1, 92, NULL, NULL),
+	(2, 92, NULL, NULL),
 	(2, 96, NULL, NULL),
-	(2, 103, NULL, NULL),
-	(3, 103, NULL, NULL),
-	(4, 101, NULL, NULL),
-	(4, 106, NULL, NULL),
-	(5, 99, NULL, NULL),
-	(6, 99, NULL, NULL),
+	(2, 98, NULL, NULL),
+	(3, 110, NULL, NULL),
+	(4, 93, NULL, NULL),
+	(4, 105, NULL, NULL),
+	(5, 92, NULL, NULL),
+	(5, 93, NULL, NULL),
+	(6, 92, NULL, NULL),
 	(6, 110, NULL, NULL),
-	(7, 103, NULL, NULL),
-	(8, 101, NULL, NULL),
-	(9, 96, NULL, NULL),
-	(9, 107, NULL, NULL),
-	(10, 101, NULL, NULL),
-	(11, 110, NULL, NULL),
-	(12, 107, NULL, NULL),
-	(12, 109, NULL, NULL),
-	(13, 98, NULL, NULL),
-	(13, 109, NULL, NULL),
-	(14, 100, NULL, NULL),
-	(14, 103, NULL, NULL),
-	(14, 110, NULL, NULL),
-	(15, 109, NULL, NULL),
-	(16, 103, NULL, NULL),
-	(17, 101, NULL, NULL),
-	(17, 107, NULL, NULL),
-	(18, 99, NULL, NULL),
-	(18, 107, NULL, NULL),
-	(19, 93, NULL, NULL),
+	(6, 111, NULL, NULL),
+	(7, 94, NULL, NULL),
+	(7, 111, NULL, NULL),
+	(8, 94, NULL, NULL),
+	(9, 105, NULL, NULL),
+	(10, 93, NULL, NULL),
+	(11, 93, NULL, NULL),
+	(11, 103, NULL, NULL),
+	(12, 98, NULL, NULL),
+	(12, 103, NULL, NULL),
+	(12, 110, NULL, NULL),
+	(13, 103, NULL, NULL),
+	(14, 93, NULL, NULL),
+	(14, 94, NULL, NULL),
+	(14, 105, NULL, NULL),
+	(15, 105, NULL, NULL),
+	(16, 100, NULL, NULL),
+	(17, 92, NULL, NULL),
+	(18, 93, NULL, NULL),
 	(19, 98, NULL, NULL),
-	(19, 106, NULL, NULL),
+	(19, 111, NULL, NULL),
 	(20, 96, NULL, NULL),
-	(20, 109, NULL, NULL);
+	(20, 110, NULL, NULL);
 /*!40000 ALTER TABLE `category_vacancy` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.cities
@@ -816,10 +814,10 @@ CREATE TABLE IF NOT EXISTS `employers` (
   CONSTRAINT `employers_category_id_foreign` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pusatkarir.employers: ~0 rows (approximately)
+-- Dumping data for table pusatkarir.employers: ~1 rows (approximately)
 /*!40000 ALTER TABLE `employers` DISABLE KEYS */;
 INSERT INTO `employers` (`id`, `company_name`, `since`, `logo`, `description`, `website`, `telp`, `tin`, `business_scale`, `category_id`, `number_of_employee`, `status`, `created_at`, `updated_at`) VALUES
-	(1, 'Pusat Karir Unmer Malang', '1964', 'pusat-karir-unmer-malang.png', 'Fermentum mi blandit aptent etiam malesuada amet donec placerat rutrum euismod sagittis adipiscing magnis leo vitae sociosqu si cursus per ullamcorper facilisi ac lacus porttitor condimentum phasellus mauris aliquet diam erat maecenas sed nisl tortor vulputate class dolor ad pretium risus arcu in ut faucibus magna maximus efficitur nisi habitasse hendrerit nascetur vivamus fusce mollis odio litora curabitur sit consequat bibendum lobortis nibh hac laoreet curae non porta parturient commodo facilisis vestibulum ultricies quis', 'https://pusatkarir.unmer.ac.id/', '0853453444546', '111111111111111', 'Big', 1, '>500', 'Verified', '2022-05-14 21:14:19', '2022-05-14 21:14:19');
+	(1, 'Pusat Karir Unmer Malang', '1964', 'pusat-karir-unmer-malang.png', 'Fermentum mi blandit aptent etiam malesuada amet donec placerat rutrum euismod sagittis adipiscing magnis leo vitae sociosqu si cursus per ullamcorper facilisi ac lacus porttitor condimentum phasellus mauris aliquet diam erat maecenas sed nisl tortor vulputate class dolor ad pretium risus arcu in ut faucibus magna maximus efficitur nisi habitasse hendrerit nascetur vivamus fusce mollis odio litora curabitur sit consequat bibendum lobortis nibh hac laoreet curae non porta parturient commodo facilisis vestibulum ultricies quis', 'https://pusatkarir.unmer.ac.id/', '0853453444546', '111111111111111', 'Big', 1, '>500', 'Verified', '2022-05-15 08:32:09', '2022-05-15 08:32:09');
 /*!40000 ALTER TABLE `employers` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.failed_jobs
@@ -894,7 +892,7 @@ CREATE TABLE IF NOT EXISTS `migrations` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=22 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
--- Dumping data for table pusatkarir.migrations: ~21 rows (approximately)
+-- Dumping data for table pusatkarir.migrations: ~18 rows (approximately)
 /*!40000 ALTER TABLE `migrations` DISABLE KEYS */;
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 	(1, '2014_10_12_000000_create_users_table', 1),
@@ -938,14 +936,14 @@ CREATE TABLE IF NOT EXISTS `pages` (
 -- Dumping data for table pusatkarir.pages: ~8 rows (approximately)
 /*!40000 ALTER TABLE `pages` DISABLE KEYS */;
 INSERT INTO `pages` (`id`, `name`, `title`, `slug`, `content`, `image`, `carousel`, `status`, `created_at`, `updated_at`) VALUES
-	(1, 'About', 'Selamat datang diwebsite resmi Puskar Unmer Malang', 'about', 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam', 'slide.jpg', '1', 'active', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(2, 'Term and conditions', 'Syarat & Ketentuan Pendaftar Puskar Unmer', 'term-and-conditions', 'Viverra si ridiculus penatibus letius adipiscing platea nec ac id dignissim nibh commodo vehicula ornare interdum eros cubilia nascetur mus egestas non etiam dis sociosqu pulvinar vivamus auctor laoreet conubia lobortis fermentum ipsum duis dui hendrerit porttitor himenaeos cursus diam mi convallis condimentum inceptos massa fusce donec tellus purus et elit euismod curae lorem in feugiat ullamcorper class augue neque gravida vel hac senectus finibus imperdiet vulputate aenean odio primis rutrum justo dapibus montes', 'https://via.placeholder.com/1920x800.png/003300?text=ut', '0', 'active', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(3, 'Membership', 'Dapatkan keuntung beragabung menjadi member Puskar Unmer Malang', 'membership', 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam', 'https://via.placeholder.com/1920x800.png/0000bb?text=quod', '0', 'active', '2022-05-14 21:14:20', '2022-05-14 21:14:20'),
-	(4, 'Veritatis', 'Natus et voluptatum nam ratione qui quasi totam et.', 'veritatis', 'Voluptas fugiat ut et ut et repudiandae aut et. Repellat ab voluptatum quisquam adipisci. Distinctio error tempora facilis facilis voluptatem deserunt quas. Deserunt quibusdam maiores enim neque a excepturi ipsam.', 'https://via.placeholder.com/1920x800.png/002277?text=qui', '1', 'active', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(5, 'Odit', 'Omnis voluptate est qui eveniet qui et sunt voluptatem.', 'odit', 'Omnis id sunt maiores et. Eum voluptatem deserunt sit officiis quaerat nobis assumenda vel. Delectus voluptates recusandae culpa accusantium et. Exercitationem est excepturi ullam dolores. Eius dolor est ipsam molestiae non.', 'https://via.placeholder.com/1920x800.png/00aa55?text=veniam', '1', 'active', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(6, 'Voluptatibus', 'A voluptas quis reprehenderit aspernatur eos.', 'voluptatibus', 'Impedit aut voluptates illum accusamus. Sed iure eum voluptatem. Non aut in ab eum cumque est porro.', 'https://via.placeholder.com/1920x800.png/007733?text=vero', '1', 'active', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(7, 'Repudiandae', 'Culpa maiores veritatis tempora quae voluptatem.', 'repudiandae', 'Vel nesciunt tempore ut sint exercitationem. Aperiam sit doloremque repudiandae consequatur.', 'https://via.placeholder.com/1920x800.png/00ddff?text=voluptatem', '1', 'active', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(8, 'Quam', 'Omnis labore similique reiciendis.', 'quam', 'Hic similique aperiam quod est corporis ab sed. Qui dolorum quia asperiores sapiente. Voluptatem quos vel est possimus voluptates qui numquam. Recusandae quasi corporis expedita ipsum consectetur.', 'https://via.placeholder.com/1920x800.png/00ee11?text=aliquid', '1', 'active', '2022-05-14 21:14:23', '2022-05-14 21:14:23');
+	(1, 'About', 'Selamat datang diwebsite resmi Puskar Unmer Malang', 'about', 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam', 'slide.jpg', '1', 'active', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(2, 'Term and conditions', 'Syarat & Ketentuan Pendaftar Puskar Unmer', 'term-and-conditions', 'Viverra si ridiculus penatibus letius adipiscing platea nec ac id dignissim nibh commodo vehicula ornare interdum eros cubilia nascetur mus egestas non etiam dis sociosqu pulvinar vivamus auctor laoreet conubia lobortis fermentum ipsum duis dui hendrerit porttitor himenaeos cursus diam mi convallis condimentum inceptos massa fusce donec tellus purus et elit euismod curae lorem in feugiat ullamcorper class augue neque gravida vel hac senectus finibus imperdiet vulputate aenean odio primis rutrum justo dapibus montes', 'https://via.placeholder.com/1920x800.png/003300?text=ut', '0', 'active', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(3, 'Membership', 'Dapatkan keuntung beragabung menjadi member Puskar Unmer Malang', 'membership', 'Habitasse curabitur mi massa dictum proin per lobortis orci ac laoreet leo velit sodales molestie est primis eros senectus amet ad duis consectetuer mus egestas posuere rutrum parturient mauris libero pellentesque donec aenean aliquam vel ultrices si risus integer ligula condimentum platea et sem fermentum erat hac morbi non quisque placerat cubilia vehicula elit at ultricies ut dignissim ex iaculis porta malesuada semper lorem accumsan imperdiet tellus convallis tempus aptent efficitur suscipit eu etiam', 'https://via.placeholder.com/1920x800.png/0000bb?text=quod', '0', 'active', '2022-05-15 08:32:10', '2022-05-15 08:32:10'),
+	(4, 'Repellat Nulla', 'Aut rem rerum aliquam rerum.', 'repellat-nulla', 'Non minima laudantium sunt omnis sint ducimus culpa nam. Quibusdam quae aut quasi delectus odio ab. Consequatur a occaecati non et provident.', 'https://via.placeholder.com/1920x800.png/00bb55?text=et', '1', 'active', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(5, 'Amet Omnis', 'Sint adipisci non eius aut accusantium dolorum quaerat.', 'amet-omnis', 'Fugiat nam accusamus omnis quidem porro alias fugit. Molestiae quo expedita ea. Mollitia quas explicabo aut hic sit iste officia. Inventore saepe atque modi quidem dolore recusandae in recusandae. Ullam consequatur et voluptas.', 'https://via.placeholder.com/1920x800.png/0033cc?text=vel', '1', 'active', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(6, 'Rem Qui', 'Nihil aut et repellendus enim sed ipsam.', 'rem-qui', 'Ut accusamus debitis tempore sunt sunt et. Rerum inventore accusantium tempore molestias et nam dolorem. Voluptatem aspernatur itaque ut iure nostrum placeat quidem.', 'https://via.placeholder.com/1920x800.png/0099ee?text=dolor', '1', 'active', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(7, 'Omnis Doloribus', 'Incidunt vitae provident similique illo necessitatibus in qui.', 'omnis-doloribus', 'Molestias esse ipsam tempora et et dolorem. Facilis possimus impedit quam ut. Sit aut est dicta voluptatem architecto.', 'https://via.placeholder.com/1920x800.png/0044bb?text=et', '1', 'active', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(8, 'Et Aut', 'Tenetur quae laudantium id dolore ut.', 'et-aut', 'Non omnis adipisci molestiae. Autem sit impedit porro cumque omnis dignissimos et ullam. Veritatis magnam provident assumenda quam vero numquam est.', 'https://via.placeholder.com/1920x800.png/007744?text=eligendi', '1', 'active', '2022-05-15 08:32:13', '2022-05-15 08:32:13');
 /*!40000 ALTER TABLE `pages` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.password_resets
@@ -1089,9 +1087,9 @@ CREATE TABLE IF NOT EXISTS `roles` (
 -- Dumping data for table pusatkarir.roles: ~3 rows (approximately)
 /*!40000 ALTER TABLE `roles` DISABLE KEYS */;
 INSERT INTO `roles` (`id`, `name`, `display_name`, `description`, `created_at`, `updated_at`) VALUES
-	(1, 'admin', 'Superadmin', 'is to manage everything on the system', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(2, 'employer', 'Company', 'is to manage everything on the system', '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(3, 'seeker', 'User Public', 'is to manage everything on the system', '2022-05-14 21:14:19', '2022-05-14 21:14:19');
+	(1, 'admin', 'Superadmin', 'is to manage everything on the system', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(2, 'employer', 'Company', 'is to manage everything on the system', '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(3, 'seeker', 'User Public', 'is to manage everything on the system', '2022-05-15 08:32:09', '2022-05-15 08:32:09');
 /*!40000 ALTER TABLE `roles` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.role_user
@@ -1135,9 +1133,9 @@ CREATE TABLE IF NOT EXISTS `seekers` (
 -- Dumping data for table pusatkarir.seekers: ~3 rows (approximately)
 /*!40000 ALTER TABLE `seekers` DISABLE KEYS */;
 INSERT INTO `seekers` (`id`, `first_name`, `last_name`, `logo`, `date_of_birth`, `gender`, `marital_status`, `telp`, `website`, `description`, `created_at`, `updated_at`) VALUES
-	(1, 'Kaleb', 'Carleton', 'https://via.placeholder.com/200x200.png/00ee66?text=qui', '2000-05-03', 'Male', 'Married', '2512040680', 'http://waters.com/nostrum-consectetur-consequatur-sapiente-fugiat-accusamus-laborum-iste', 'Eveniet placeat atque recusandae vero. Accusantium ut rem aut ullam. Qui unde libero perspiciatis quae.', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(2, 'Osborne', 'Celine', 'https://via.placeholder.com/200x200.png/008833?text=repellendus', '2000-09-25', 'Male', 'Married', '2617369161', 'https://howell.com/non-qui-aut-consequuntur-fuga-rerum-sint.html', 'Aut voluptatem qui corporis. Maiores similique voluptatibus et blanditiis culpa pariatur. Provident ut natus magni voluptas repellendus voluptatem.', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(3, 'Gudrun', 'Onie', 'https://via.placeholder.com/200x200.png/00dd77?text=ducimus', '1992-01-30', 'Male', 'Married', '3689166248', 'http://kohler.info/quam-saepe-ut-dolor-quia-omnis-laudantium.html', 'Et a eos quia molestiae provident sint cumque. Hic quos dolores nulla necessitatibus omnis harum aperiam. Officiis dolor voluptatibus maiores dolorum qui iusto aperiam.', '2022-05-14 21:14:23', '2022-05-14 21:14:23');
+	(1, 'Hazel', 'Giovani', 'https://via.placeholder.com/200x200.png/0066cc?text=qui', '1990-02-27', 'Male', 'Married', '9170708416', 'https://prosacco.com/magnam-cupiditate-placeat-minus-porro-libero-ipsam.html', 'Repellat et natus quo. Est placeat placeat laudantium ea. Error aut aut sunt ut. Nisi sit dolorem voluptatem beatae est quis deserunt expedita. Maxime deserunt pariatur vel et rerum eos.', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(2, 'Arely', 'Fiona', 'https://via.placeholder.com/200x200.png/005511?text=autem', '2003-11-27', 'Male', 'Married', '8384742423', 'http://www.medhurst.org/magnam-necessitatibus-asperiores-quia-sed', 'Expedita sint cupiditate quia dolorem consequuntur culpa. Quia dolorem commodi quidem ut ut id. Quae accusamus recusandae numquam dolor consequatur in est.', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(3, 'Raven', 'Sienna', 'https://via.placeholder.com/200x200.png/00eeff?text=soluta', '1990-02-15', 'Male', 'Married', '1263083908', 'http://www.johnston.info/aut-illum-voluptatem-dolore-sit-temporibus-voluptatem.html', 'Et ea aliquid officiis ut. Et minus est similique vero consequuntur quaerat voluptas. Voluptatem sint similique et sed distinctio nesciunt ipsa et. Adipisci iste impedit cupiditate repudiandae repudiandae hic.', '2022-05-15 08:32:13', '2022-05-15 08:32:13');
 /*!40000 ALTER TABLE `seekers` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.seeker_education
@@ -1157,9 +1155,9 @@ CREATE TABLE IF NOT EXISTS `seeker_education` (
 -- Dumping data for table pusatkarir.seeker_education: ~3 rows (approximately)
 /*!40000 ALTER TABLE `seeker_education` DISABLE KEYS */;
 INSERT INTO `seeker_education` (`seeker_id`, `last_education`, `major`, `institute_name`, `graduation_year`, `gpa`, `created_at`, `updated_at`) VALUES
-	(1, 'D1', '110', 'Facere Cum Qui', '2022', '646', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(2, 'D4', '92', 'Dolor Repellat Quia', '2022', '992', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(3, 'D2', '109', 'Voluptatem Rerum Ipsam', '2022', '756', '2022-05-14 21:14:23', '2022-05-14 21:14:23');
+	(1, 'S2', '103', 'Sed Sit Impedit', '2022', '906', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(2, 'D3', '103', 'Nemo Expedita Asperiores', '2022', '265', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(3, 'S2', '97', 'Commodi Nihil Neque', '2022', '290', '2022-05-15 08:32:13', '2022-05-15 08:32:13');
 /*!40000 ALTER TABLE `seeker_education` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.taggables
@@ -1175,47 +1173,47 @@ CREATE TABLE IF NOT EXISTS `taggables` (
 -- Dumping data for table pusatkarir.taggables: ~41 rows (approximately)
 /*!40000 ALTER TABLE `taggables` DISABLE KEYS */;
 INSERT INTO `taggables` (`tag_id`, `taggable_id`, `taggable_type`) VALUES
-	(8, 1, 'App\\Models\\Article'),
-	(11, 1, 'App\\Models\\Article'),
-	(9, 2, 'App\\Models\\Article'),
-	(10, 2, 'App\\Models\\Article'),
-	(16, 2, 'App\\Models\\Article'),
-	(2, 3, 'App\\Models\\Article'),
+	(15, 1, 'App\\Models\\Article'),
+	(19, 1, 'App\\Models\\Article'),
+	(2, 2, 'App\\Models\\Article'),
+	(6, 2, 'App\\Models\\Article'),
+	(11, 2, 'App\\Models\\Article'),
+	(1, 3, 'App\\Models\\Article'),
+	(6, 3, 'App\\Models\\Article'),
 	(11, 3, 'App\\Models\\Article'),
-	(6, 4, 'App\\Models\\Article'),
-	(17, 4, 'App\\Models\\Article'),
-	(19, 4, 'App\\Models\\Article'),
+	(10, 4, 'App\\Models\\Article'),
+	(20, 4, 'App\\Models\\Article'),
 	(3, 5, 'App\\Models\\Article'),
-	(10, 5, 'App\\Models\\Article'),
-	(7, 6, 'App\\Models\\Article'),
-	(12, 7, 'App\\Models\\Article'),
-	(13, 7, 'App\\Models\\Article'),
-	(5, 8, 'App\\Models\\Article'),
-	(18, 8, 'App\\Models\\Article'),
-	(20, 8, 'App\\Models\\Article'),
-	(4, 9, 'App\\Models\\Article'),
-	(18, 9, 'App\\Models\\Article'),
-	(7, 10, 'App\\Models\\Article'),
-	(16, 10, 'App\\Models\\Article'),
-	(11, 11, 'App\\Models\\Article'),
-	(19, 11, 'App\\Models\\Article'),
-	(11, 12, 'App\\Models\\Article'),
-	(4, 13, 'App\\Models\\Article'),
+	(5, 6, 'App\\Models\\Article'),
+	(19, 6, 'App\\Models\\Article'),
+	(5, 7, 'App\\Models\\Article'),
+	(3, 8, 'App\\Models\\Article'),
+	(12, 9, 'App\\Models\\Article'),
+	(6, 10, 'App\\Models\\Article'),
+	(2, 11, 'App\\Models\\Article'),
+	(13, 11, 'App\\Models\\Article'),
+	(9, 12, 'App\\Models\\Article'),
+	(13, 12, 'App\\Models\\Article'),
+	(18, 12, 'App\\Models\\Article'),
 	(5, 13, 'App\\Models\\Article'),
-	(9, 14, 'App\\Models\\Article'),
-	(19, 14, 'App\\Models\\Article'),
-	(20, 14, 'App\\Models\\Article'),
-	(3, 15, 'App\\Models\\Article'),
-	(10, 15, 'App\\Models\\Article'),
-	(10, 16, 'App\\Models\\Article'),
-	(1, 17, 'App\\Models\\Article'),
+	(8, 13, 'App\\Models\\Article'),
+	(13, 13, 'App\\Models\\Article'),
+	(5, 14, 'App\\Models\\Article'),
+	(11, 14, 'App\\Models\\Article'),
+	(12, 14, 'App\\Models\\Article'),
+	(1, 15, 'App\\Models\\Article'),
+	(5, 15, 'App\\Models\\Article'),
+	(12, 15, 'App\\Models\\Article'),
+	(20, 16, 'App\\Models\\Article'),
 	(9, 17, 'App\\Models\\Article'),
-	(7, 18, 'App\\Models\\Article'),
-	(9, 18, 'App\\Models\\Article'),
-	(2, 19, 'App\\Models\\Article'),
+	(14, 17, 'App\\Models\\Article'),
+	(12, 18, 'App\\Models\\Article'),
+	(16, 18, 'App\\Models\\Article'),
+	(3, 19, 'App\\Models\\Article'),
 	(10, 19, 'App\\Models\\Article'),
-	(6, 20, 'App\\Models\\Article'),
-	(8, 20, 'App\\Models\\Article');
+	(16, 19, 'App\\Models\\Article'),
+	(3, 20, 'App\\Models\\Article'),
+	(6, 20, 'App\\Models\\Article');
 /*!40000 ALTER TABLE `taggables` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.tags
@@ -1231,26 +1229,26 @@ CREATE TABLE IF NOT EXISTS `tags` (
 -- Dumping data for table pusatkarir.tags: ~20 rows (approximately)
 /*!40000 ALTER TABLE `tags` DISABLE KEYS */;
 INSERT INTO `tags` (`id`, `name`, `slug`, `created_at`, `updated_at`) VALUES
-	(1, 'Beatae', 'beatae', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(2, 'Minus', 'minus', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(3, 'Ut', 'ut', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(4, 'Quas', 'quas', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(5, 'Est', 'est', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(6, 'Et', 'et', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(7, 'Quia', 'quia', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(8, 'Quae', 'quae', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(9, 'Sed', 'sed', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(10, 'Fuga', 'fuga', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(11, 'Adipisci', 'adipisci', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(12, 'Debitis', 'debitis', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(13, 'At', 'at', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(14, 'Doloremque', 'doloremque', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(15, 'Facere', 'facere', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(16, 'Autem', 'autem', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(17, 'Dignissimos', 'dignissimos', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(18, 'Ea', 'ea', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(19, 'Eaque', 'eaque', '2022-05-14 21:14:22', '2022-05-14 21:14:22'),
-	(20, 'Impedit', 'impedit', '2022-05-14 21:14:22', '2022-05-14 21:14:22');
+	(1, 'Dolor', 'dolor', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(2, 'Quidem', 'quidem', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(3, 'Sit', 'sit', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(4, 'Quia', 'quia', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(5, 'Nostrum', 'nostrum', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(6, 'Modi', 'modi', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(7, 'Quasi', 'quasi', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(8, 'Accusamus', 'accusamus', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(9, 'Quis', 'quis', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(10, 'Consequatur', 'consequatur', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(11, 'Deserunt', 'deserunt', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(12, 'Atque', 'atque', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(13, 'Eius', 'eius', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(14, 'Repellendus', 'repellendus', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(15, 'Quos', 'quos', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(16, 'Voluptates', 'voluptates', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(17, 'Corrupti', 'corrupti', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(18, 'Labore', 'labore', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(19, 'Ipsam', 'ipsam', '2022-05-15 08:32:12', '2022-05-15 08:32:12'),
+	(20, 'Voluptas', 'voluptas', '2022-05-15 08:32:12', '2022-05-15 08:32:12');
 /*!40000 ALTER TABLE `tags` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.users
@@ -1274,10 +1272,10 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Dumping data for table pusatkarir.users: ~4 rows (approximately)
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
 INSERT INTO `users` (`id`, `email`, `username`, `email_verified_at`, `password`, `userable_type`, `userable_id`, `remember_token`, `created_at`, `updated_at`) VALUES
-	(1, 'pusatkarir@unmer.ac.id', 'pusatkarir-unmermalang', '2022-05-14 21:14:19', '$2y$10$EAk7.gcncYK5Jx1bQDiGIuCEWuUHIazf4HDsMoD0FmnBIjgVOsvOa', 'App\\Models\\Employer', 1, NULL, '2022-05-14 21:14:19', '2022-05-14 21:14:19'),
-	(2, 'simonis.earline@example.net', 'kalebcarleton', '2022-05-14 21:14:23', '$2y$10$8eCRaKC7Gi5Bv6NYFeByX.yw9fUdau5O8kR14yfIiUcfmc2QAYrbe', 'App\\Models\\Seeker', 1, 'pC44Bd0CdpnhyMpaewWxwJHazZSM6lC6UmNzWrWi936XmD3I5BDxWSowGhcR', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(3, 'jimmy46@example.net', 'osborneceline', '2022-05-14 21:14:23', '$2y$10$VHalo7Dlm8HwuWrvWe9BJ.AnfZjgHzl6wvN7xBdYX3oc3RNntuioa', 'App\\Models\\Seeker', 2, 'LGGitV4KQ5', '2022-05-14 21:14:23', '2022-05-14 21:14:23'),
-	(4, 'larue.williamson@example.net', 'gudrunonie', '2022-05-14 21:14:23', '$2y$10$7nPOrP8ashVnP1xCO8ILXeSuMc/X9sQUE3uSHKtERXZyUyrvdHHPu', 'App\\Models\\Seeker', 3, 'drMKcB7RsO', '2022-05-14 21:14:23', '2022-05-14 21:14:23');
+	(1, 'pusatkarir@unmer.ac.id', 'pusatkarir-unmermalang', '2022-05-15 08:32:09', '$2y$10$u9uXOkSrimdjfWm0GFzP.ul.Yc8otGoA4AbmJ4cg4LJk3kBUaoYly', 'App\\Models\\Employer', 1, NULL, '2022-05-15 08:32:09', '2022-05-15 08:32:09'),
+	(2, 'smetz@example.net', 'hazelgiovani', '2022-05-15 08:32:13', '$2y$10$jUbQFzBN9mziUtH3HL3L.uu1lcTtAVgsR99rTalLypc5FSykEOWJ2', 'App\\Models\\Seeker', 1, '9Gu79AIaq3', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(3, 'krystina.kshlerin@example.net', 'arelyfiona', '2022-05-15 08:32:13', '$2y$10$9HD3DfYDHUf.Qmr6UIVlBu4FV1hQWSW1LHKAvhtJ/Ovf0AlpqbIG.', 'App\\Models\\Seeker', 2, '7MAWfY8FFC', '2022-05-15 08:32:13', '2022-05-15 08:32:13'),
+	(4, 'aracely16@example.net', 'ravensienna', '2022-05-15 08:32:13', '$2y$10$kh1DOdpYi6XmSREKYE2GLenEnBs5msoKusv..0hzWOAXG4loz.COm', 'App\\Models\\Seeker', 3, 'Ca7jyjyCxk', '2022-05-15 08:32:13', '2022-05-15 08:32:13');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 
 -- Dumping structure for table pusatkarir.vacancies
@@ -1299,26 +1297,26 @@ CREATE TABLE IF NOT EXISTS `vacancies` (
 -- Dumping data for table pusatkarir.vacancies: ~20 rows (approximately)
 /*!40000 ALTER TABLE `vacancies` DISABLE KEYS */;
 INSERT INTO `vacancies` (`id`, `employer_id`, `job_title`, `slug`, `description`, `job_type`, `expiry_date`, `created_at`, `updated_at`) VALUES
-	(1, 1, 'Mollitia veniam a suscipit accusamus occaecati.', 'mollitia-veniam-a-suscipit-accusamus-occaecati', 'Quasi repellat soluta rerum. Voluptas ut aliquam at voluptatem.', 'Permanent-employment', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(2, 1, 'Dicta similique necessitatibus nobis quia et fuga.', 'dicta-similique-necessitatibus-nobis-quia-et-fuga', 'Modi qui odit sed et necessitatibus fugiat. Repellat quis quasi neque et voluptatem voluptas ut. Non labore sunt neque omnis sit vitae. Mollitia voluptatem dolores suscipit aut magni vel praesentium perferendis.', 'Fixed-term', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(3, 1, 'Enim ducimus sunt voluptas dolor.', 'enim-ducimus-sunt-voluptas-dolor', 'Aperiam amet reiciendis atque vel ut rerum. Harum sit ullam aut. Quidem praesentium magni facere mollitia ipsa. Repellat ut sit veniam distinctio veritatis fugiat sequi.', 'Internship', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(4, 1, 'Velit similique quam repellat vel rerum voluptatem provident corrupti.', 'velit-similique-quam-repellat-vel-rerum-voluptatem-provident-corrupti', 'Amet dolorum ad earum incidunt nulla. Dignissimos architecto odit blanditiis vero non tempore. Officia enim id et consectetur suscipit aut maiores ut. Consequatur quis suscipit est ab.', 'Fixed-term', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(5, 1, 'Consequuntur nesciunt dolorum aut odit rerum aut est fuga.', 'consequuntur-nesciunt-dolorum-aut-odit-rerum-aut-est-fuga', 'Molestiae nesciunt omnis laboriosam in est inventore suscipit. Quasi inventore dolor vel maxime atque. Delectus alias qui sit dolore blanditiis recusandae tenetur non. Vitae molestiae ad rerum quo harum provident.', 'Part-time', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(6, 1, 'Earum sit est praesentium aut autem molestiae.', 'earum-sit-est-praesentium-aut-autem-molestiae', 'Numquam accusamus non ad inventore est. Architecto possimus iure aperiam explicabo perspiciatis porro quas sequi. Cumque libero quia ab excepturi quasi nobis a.', 'Internship', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(7, 1, 'Quo ipsum enim repellat minus qui omnis.', 'quo-ipsum-enim-repellat-minus-qui-omnis', 'Laborum voluptatem amet consequatur harum cumque et tenetur. Quia omnis rerum dolore sapiente ad facilis.', 'Internship', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(8, 1, 'Sed eos aut ab a amet.', 'sed-eos-aut-ab-a-amet', 'Eos harum id saepe dolores mollitia perferendis dolores et. Corrupti ducimus molestiae voluptas sit animi et rerum.', 'Part-time', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(9, 1, 'Velit eum eveniet et omnis aspernatur explicabo.', 'velit-eum-eveniet-et-omnis-aspernatur-explicabo', 'Magnam quod ex deleniti ut illo tenetur. Enim dolores ut blanditiis eos omnis. Explicabo aut voluptatum quia eligendi qui accusantium. Voluptatem illum voluptatem rem eum.', 'Part-time', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(10, 1, 'Odit dolorem necessitatibus consequatur qui officiis deleniti quod nihil.', 'odit-dolorem-necessitatibus-consequatur-qui-officiis-deleniti-quod-nihil', 'Quisquam reiciendis est consequatur eaque culpa consequatur rerum autem. Illum reiciendis voluptatum dolorem.', 'Part-time', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(11, 1, 'Ducimus eveniet provident fugiat labore iure saepe nam.', 'ducimus-eveniet-provident-fugiat-labore-iure-saepe-nam', 'Aliquam tempora dignissimos dolores totam fugit repellendus perferendis fugiat. Aliquam eos velit voluptas. Natus tenetur dolor vel laboriosam quia. Aut odio sunt cumque enim et numquam.', 'Permanent-employment', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(12, 1, 'Sit id dignissimos natus optio.', 'sit-id-dignissimos-natus-optio', 'Unde debitis repellendus cumque pariatur. Nemo consequatur consequatur qui qui architecto soluta. Molestias enim rerum et adipisci laboriosam.', 'Fixed-term', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(13, 1, 'Ea reiciendis alias natus et expedita blanditiis.', 'ea-reiciendis-alias-natus-et-expedita-blanditiis', 'Aspernatur vitae eaque laborum quis aliquam tempora cupiditate. Corporis est provident aspernatur consequuntur ut corporis. Saepe provident repellat qui quasi ea et.', 'Permanent-employment', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(14, 1, 'Quam velit aut nulla vel.', 'quam-velit-aut-nulla-vel', 'Voluptas odit architecto dolorum blanditiis quia occaecati. Et nesciunt odio quibusdam et aspernatur fugiat et. Omnis autem sint sint sit et harum fuga. Sint totam voluptatum dolorum enim sunt aut ullam. Recusandae aut illo repellat eos ut voluptatem.', 'Outsourcing', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(15, 1, 'Officia voluptatum quasi et nostrum nihil et aut.', 'officia-voluptatum-quasi-et-nostrum-nihil-et-aut', 'Qui assumenda et eos. Dolores error illo impedit tempore est porro voluptate quia. Adipisci adipisci molestias eveniet pariatur. Itaque sed id nostrum quibusdam illum non quas.', 'Permanent-employment', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(16, 1, 'Molestiae aut et tempora voluptas repellat.', 'molestiae-aut-et-tempora-voluptas-repellat', 'Molestiae suscipit consequuntur inventore est ut in nihil. Quod beatae omnis aut et autem iusto. Ipsum corrupti cum aut. Neque dolore eos doloribus aut consequuntur dolorem voluptates sed.', 'Outsourcing', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(17, 1, 'Reiciendis itaque voluptas ea accusantium quas ipsum necessitatibus.', 'reiciendis-itaque-voluptas-ea-accusantium-quas-ipsum-necessitatibus', 'Nihil nostrum veritatis aspernatur praesentium quas dignissimos consectetur. Sed iste inventore et asperiores omnis qui vel. Quia itaque ut quia quae et similique.', 'Internship', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(18, 1, 'Cum ut voluptates officia nisi nostrum.', 'cum-ut-voluptates-officia-nisi-nostrum', 'Numquam error iure sunt omnis est sapiente voluptas. Odit ut doloremque voluptas totam. Eum nesciunt qui cum autem sunt.', 'Fixed-term', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(19, 1, 'Sit qui fuga aspernatur necessitatibus voluptatem et ratione.', 'sit-qui-fuga-aspernatur-necessitatibus-voluptatem-et-ratione', 'Eos ipsam et magnam quia quia et quod autem. Officia odio ut illo aut. Deserunt velit nesciunt qui et deserunt magnam repellendus. Numquam quidem enim placeat nemo.', 'Permanent-employment', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21'),
-	(20, 1, 'Consequuntur tempora velit sed sunt qui nesciunt.', 'consequuntur-tempora-velit-sed-sunt-qui-nesciunt', 'Eius aut dolorem sit doloremque atque consequatur consequuntur. Fuga consequatur incidunt non doloribus non. Ullam sed molestiae corrupti aut deserunt sed quia aut.', 'Internship', '2022-05-24 21:14:21', '2022-05-14 21:14:21', '2022-05-14 21:14:21');
+	(1, 1, 'Nihil Eligendi', 'nihil-eligendi', 'Sunt est et et quia. Aliquid iusto sunt vel hic beatae nesciunt. Magni distinctio aspernatur sunt sit qui repellendus harum.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(2, 1, 'Minus A', 'minus-a', 'Qui velit mollitia ea consequatur illum accusantium vel. Qui omnis perspiciatis quis ipsa. Asperiores recusandae vitae dolor et.', 'Part-time', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(3, 1, 'Vel Aut', 'vel-aut', 'Sequi perferendis in tenetur iste similique dolor neque. Consequatur et et et beatae harum voluptatem placeat. Eos nesciunt porro ullam.', 'Permanent-employment', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(4, 1, 'Et Necessitatibus', 'et-necessitatibus', 'Qui non distinctio eos molestiae commodi sint similique. Nostrum quis consequatur rerum numquam non voluptatem alias esse. Et velit sunt aliquam autem maiores.', 'Part-time', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(5, 1, 'Quo Odio', 'quo-odio', 'Sapiente voluptatem eligendi aperiam et animi. Dignissimos distinctio inventore esse qui ut et. Deserunt et illo minima tempore.', 'Permanent-employment', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(6, 1, 'Labore Quia', 'labore-quia', 'Laboriosam molestiae placeat asperiores error ut. Eius sint recusandae quas quam. Repudiandae atque assumenda natus consectetur et possimus nobis.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(7, 1, 'Ipsa Ipsum', 'ipsa-ipsum', 'Excepturi fuga voluptatem sapiente sed ut ab ratione illum. Temporibus rerum error earum dignissimos architecto. Odio accusantium omnis voluptatem quidem et laborum. Voluptatem mollitia qui ut cum et distinctio corrupti.', 'Permanent-employment', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(8, 1, 'Nam Dolores', 'nam-dolores', 'Et culpa aut eaque vel consequatur. Et quia est aliquam qui aut atque eligendi. Aut id placeat distinctio cum suscipit. In soluta hic reiciendis recusandae rerum praesentium illum.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(9, 1, 'Quisquam Reiciendis', 'quisquam-reiciendis', 'Voluptas illum deleniti in cum nostrum non quia tempora. Rerum provident repellendus maxime ratione voluptas ducimus. Qui cupiditate dolores veritatis non inventore unde consequatur.', 'Outsourcing', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(10, 1, 'Minus Itaque', 'minus-itaque', 'Optio maxime dolore sapiente expedita beatae illum id reiciendis. Voluptatum ad accusamus culpa quaerat beatae velit voluptates. Voluptas nesciunt sint voluptas magnam doloremque et nobis.', 'Outsourcing', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(11, 1, 'Et Nulla', 'et-nulla', 'Nostrum praesentium et aut tempora consequatur deserunt. Autem et voluptatem et atque voluptas in provident.', 'Internship', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(12, 1, 'Odit Rerum', 'odit-rerum', 'Porro rerum rerum molestias harum est. Temporibus enim nostrum iusto quos. Molestiae est nisi omnis doloribus distinctio aut.', 'Part-time', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(13, 1, 'Et Voluptas', 'et-voluptas', 'Aut fugiat exercitationem sit eveniet sunt molestias et. At quo aperiam illo nulla quia. Quod accusamus dicta sit voluptatem necessitatibus.', 'Internship', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(14, 1, 'Maxime Ut', 'maxime-ut', 'Possimus atque quis voluptatem iste numquam officiis. Sed sunt neque ut voluptate et culpa. Dolorem ut aspernatur et voluptatibus non alias ut.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(15, 1, 'Quisquam Numquam', 'quisquam-numquam', 'Quidem possimus facilis quasi quo vero. Eum dolor omnis cum at perspiciatis quaerat. Rerum sunt enim soluta modi. Quam rem iusto blanditiis sint.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(16, 1, 'Cupiditate Atque', 'cupiditate-atque', 'Rerum ex error incidunt adipisci sunt consequatur voluptas mollitia. Quos rerum et ullam cupiditate.', 'Outsourcing', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(17, 1, 'Blanditiis Error', 'blanditiis-error', 'Itaque nemo unde maxime non error. Maiores quaerat voluptatem est delectus harum sed. Iusto porro est quis consectetur excepturi pariatur vel eos. Ut est consectetur voluptatem beatae.', 'Internship', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(18, 1, 'Ea Et', 'ea-et', 'Est voluptatem repellendus voluptate autem. Omnis a ipsa quia esse ab omnis sint. Laborum non et mollitia illum nesciunt atque est.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(19, 1, 'Qui Labore', 'qui-labore', 'Quibusdam aliquid dolorum amet quo. Ut illum perferendis porro placeat in pariatur minima. Laboriosam ratione eum autem est beatae. Dolorum asperiores impedit quod eius sed asperiores.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11'),
+	(20, 1, 'Unde Tenetur', 'unde-tenetur', 'Voluptates quia labore quisquam culpa ullam. Totam nobis odio sint dolorum rerum. Nobis et id quos tempore. Et veniam rem quasi nihil eligendi.', 'Fixed-term', '2022-05-25 08:32:11', '2022-05-15 08:32:11', '2022-05-15 08:32:11');
 /*!40000 ALTER TABLE `vacancies` ENABLE KEYS */;
 
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
